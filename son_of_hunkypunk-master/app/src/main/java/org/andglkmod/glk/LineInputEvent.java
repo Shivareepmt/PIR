@@ -26,6 +26,8 @@ public class LineInputEvent extends Event {
 	public int rock;
 	public int unicode;
 
+
+	//Ajouter reconnaissance vocale ici !
 	public LineInputEvent(Window w, String s, long lineBuffer, long maxLen, int dispatchRock, boolean unicode) {
 		super(w);
 		line = s;

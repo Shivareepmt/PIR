@@ -316,8 +316,10 @@ public abstract class Window extends CPointed {
 		
 		@Override
 		public void putString(String str) {
-			if (mEchoStream != null)
+			if (mEchoStream != null) {
 				mEchoStream.putString(str);
+
+			}
 			super.putString(str);
 		}
 		

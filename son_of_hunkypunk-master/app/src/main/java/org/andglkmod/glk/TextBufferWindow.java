@@ -43,6 +43,8 @@ import android.os.SystemClock;
 import androidx.appcompat.widget.AppCompatEditText;
 import androidx.appcompat.widget.AppCompatTextView;
 import androidx.cardview.widget.CardView;
+
+import android.speech.tts.TextToSpeech;
 import android.text.Editable;
 import android.text.Layout;
 import android.text.Selection;
@@ -69,6 +71,8 @@ import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.insatoulouse.pir.TextToSpeechManager;
 
 
 public class TextBufferWindow extends Window {
@@ -984,6 +988,7 @@ public class TextBufferWindow extends Window {
         public void print(CharSequence text) {
             final int start = length() - 1;
             appendEx(text);
+            //// C'est ICI TTS
             Editable e = getEditableText();
             Utils.beautify(e, start);
         }

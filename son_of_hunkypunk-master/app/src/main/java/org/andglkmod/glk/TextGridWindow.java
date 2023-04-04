@@ -37,7 +37,12 @@ import android.util.Log;
 import android.view.KeyEvent;
 import android.view.inputmethod.InputMethodManager;
 
+import com.insatoulouse.pir.TextToSpeechManager;
+
 public class TextGridWindow extends Window {
+    //ON a modifié ici
+    //private  TextToSpeechManager tts =  new TextToSpeechManager(Glk.getInstance().getContext()) ;
+
     public static class TextGridParcelable implements Parcelable {
         public char[] mFrameBuf;
         public int mHeight;
@@ -134,7 +139,8 @@ public class TextGridWindow extends Window {
         @Override
         protected void doPutString(String str) throws IOException {
             if (mView == null || str == null) return;
-
+            //System.out.println(str);
+            //tts.speakText(str);
             mView.putString(str);
         }
 
