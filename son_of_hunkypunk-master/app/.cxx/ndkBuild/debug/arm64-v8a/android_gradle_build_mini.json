@@ -1,0 +1,191 @@
+{
+  "buildFiles": [
+    "D:\\Android\\son_of_hunkypunk-master\\app\\src\\main\\jni\\Android.mk"
+  ],
+  "cleanCommands": [
+    "C:\\Users\\engue\\AppData\\Local\\Android\\Sdk\\ndk\\25.2.9519653\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\src\\main\\jni\\Android.mk APP_ABI\u003darm64-v8a NDK_ALL_ABIS\u003darm64-v8a NDK_DEBUG\u003d1 APP_PLATFORM\u003dandroid-19 NDK_OUT\u003dD:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\debug\\lib clean"
+  ],
+  "buildTargetsCommand": "C:\\Users\\engue\\AppData\\Local\\Android\\Sdk\\ndk\\25.2.9519653\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\src\\main\\jni\\Android.mk APP_ABI\u003darm64-v8a NDK_ALL_ABIS\u003darm64-v8a NDK_DEBUG\u003d1 APP_PLATFORM\u003dandroid-19 NDK_OUT\u003dD:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\debug\\lib {LIST_OF_TARGETS_TO_BUILD}",
+  "libraries": {
+    "cggestal-debug-garglk": {
+      "artifactName": "cggestal",
+      "buildCommand": "C:\\Users\\engue\\AppData\\Local\\Android\\Sdk\\ndk\\25.2.9519653\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\src\\main\\jni\\Android.mk APP_ABI\u003darm64-v8a NDK_ALL_ABIS\u003darm64-v8a NDK_DEBUG\u003d1 APP_PLATFORM\u003dandroid-19 NDK_OUT\u003dD:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\debug\\lib D:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/debug/obj/local/arm64-v8a/objs-debug/garglk/cggestal.o",
+      "abi": "garglk",
+      "output": "D:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\debug\\obj\\local\\arm64-v8a\\objs-debug\\garglk\\cggestal.o"
+    },
+    "event-debug-garglk": {
+      "artifactName": "event",
+      "buildCommand": "C:\\Users\\engue\\AppData\\Local\\Android\\Sdk\\ndk\\25.2.9519653\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\src\\main\\jni\\Android.mk APP_ABI\u003darm64-v8a NDK_ALL_ABIS\u003darm64-v8a NDK_DEBUG\u003d1 APP_PLATFORM\u003dandroid-19 NDK_OUT\u003dD:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\debug\\lib D:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/debug/obj/local/arm64-v8a/objs-debug/garglk/event.o",
+      "abi": "garglk",
+      "output": "D:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\debug\\obj\\local\\arm64-v8a\\objs-debug\\garglk\\event.o"
+    },
+    "tads-debug-arm64-v8a": {
+      "artifactName": "tads",
+      "buildCommand": "C:\\Users\\engue\\AppData\\Local\\Android\\Sdk\\ndk\\25.2.9519653\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\src\\main\\jni\\Android.mk APP_ABI\u003darm64-v8a NDK_ALL_ABIS\u003darm64-v8a NDK_DEBUG\u003d1 APP_PLATFORM\u003dandroid-19 NDK_OUT\u003dD:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\debug\\lib D:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/debug/obj/local/arm64-v8a/libtads.so",
+      "abi": "arm64-v8a",
+      "output": "D:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\debug\\obj\\local\\arm64-v8a\\libtads.so"
+    },
+    "imgnull-debug-andglk": {
+      "artifactName": "imgnull",
+      "buildCommand": "C:\\Users\\engue\\AppData\\Local\\Android\\Sdk\\ndk\\25.2.9519653\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\src\\main\\jni\\Android.mk APP_ABI\u003darm64-v8a NDK_ALL_ABIS\u003darm64-v8a NDK_DEBUG\u003d1 APP_PLATFORM\u003dandroid-19 NDK_OUT\u003dD:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\debug\\lib D:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/debug/obj/local/arm64-v8a/objs-debug/andglk/imgnull.o",
+      "abi": "andglk",
+      "output": "D:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\debug\\obj\\local\\arm64-v8a\\objs-debug\\andglk\\imgnull.o"
+    },
+    "gi_dispa-debug-andglk": {
+      "artifactName": "gi_dispa",
+      "buildCommand": "C:\\Users\\engue\\AppData\\Local\\Android\\Sdk\\ndk\\25.2.9519653\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\src\\main\\jni\\Android.mk APP_ABI\u003darm64-v8a NDK_ALL_ABIS\u003darm64-v8a NDK_DEBUG\u003d1 APP_PLATFORM\u003dandroid-19 NDK_OUT\u003dD:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\debug\\lib D:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/debug/obj/local/arm64-v8a/objs-debug/andglk/gi_dispa.o",
+      "abi": "andglk",
+      "output": "D:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\debug\\obj\\local\\arm64-v8a\\objs-debug\\andglk\\gi_dispa.o"
+    },
+    "cgblorb-debug-garglk": {
+      "artifactName": "cgblorb",
+      "buildCommand": "C:\\Users\\engue\\AppData\\Local\\Android\\Sdk\\ndk\\25.2.9519653\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\src\\main\\jni\\Android.mk APP_ABI\u003darm64-v8a NDK_ALL_ABIS\u003darm64-v8a NDK_DEBUG\u003d1 APP_PLATFORM\u003dandroid-19 NDK_OUT\u003dD:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\debug\\lib D:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/debug/obj/local/arm64-v8a/objs-debug/garglk/cgblorb.o",
+      "abi": "garglk",
+      "output": "D:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\debug\\obj\\local\\arm64-v8a\\objs-debug\\garglk\\cgblorb.o"
+    },
+    "cgstream-debug-garglk": {
+      "artifactName": "cgstream",
+      "buildCommand": "C:\\Users\\engue\\AppData\\Local\\Android\\Sdk\\ndk\\25.2.9519653\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\src\\main\\jni\\Android.mk APP_ABI\u003darm64-v8a NDK_ALL_ABIS\u003darm64-v8a NDK_DEBUG\u003d1 APP_PLATFORM\u003dandroid-19 NDK_OUT\u003dD:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\debug\\lib D:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/debug/obj/local/arm64-v8a/objs-debug/garglk/cgstream.o",
+      "abi": "garglk",
+      "output": "D:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\debug\\obj\\local\\arm64-v8a\\objs-debug\\garglk\\cgstream.o"
+    },
+    "babel-debug-arm64-v8a": {
+      "artifactName": "babel",
+      "buildCommand": "C:\\Users\\engue\\AppData\\Local\\Android\\Sdk\\ndk\\25.2.9519653\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\src\\main\\jni\\Android.mk APP_ABI\u003darm64-v8a NDK_ALL_ABIS\u003darm64-v8a NDK_DEBUG\u003d1 APP_PLATFORM\u003dandroid-19 NDK_OUT\u003dD:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\debug\\lib D:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/debug/obj/local/arm64-v8a/libbabel.so",
+      "abi": "arm64-v8a",
+      "output": "D:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\debug\\obj\\local\\arm64-v8a\\libbabel.so"
+    },
+    "gi_blorb-debug-garglk": {
+      "artifactName": "gi_blorb",
+      "buildCommand": "C:\\Users\\engue\\AppData\\Local\\Android\\Sdk\\ndk\\25.2.9519653\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\src\\main\\jni\\Android.mk APP_ABI\u003darm64-v8a NDK_ALL_ABIS\u003darm64-v8a NDK_DEBUG\u003d1 APP_PLATFORM\u003dandroid-19 NDK_OUT\u003dD:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\debug\\lib D:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/debug/obj/local/arm64-v8a/objs-debug/garglk/gi_blorb.o",
+      "abi": "garglk",
+      "output": "D:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\debug\\obj\\local\\arm64-v8a\\objs-debug\\garglk\\gi_blorb.o"
+    },
+    "cgfref-debug-garglk": {
+      "artifactName": "cgfref",
+      "buildCommand": "C:\\Users\\engue\\AppData\\Local\\Android\\Sdk\\ndk\\25.2.9519653\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\src\\main\\jni\\Android.mk APP_ABI\u003darm64-v8a NDK_ALL_ABIS\u003darm64-v8a NDK_DEBUG\u003d1 APP_PLATFORM\u003dandroid-19 NDK_OUT\u003dD:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\debug\\lib D:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/debug/obj/local/arm64-v8a/objs-debug/garglk/cgfref.o",
+      "abi": "garglk",
+      "output": "D:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\debug\\obj\\local\\arm64-v8a\\objs-debug\\garglk\\cgfref.o"
+    },
+    "cgunicod-debug-garglk": {
+      "artifactName": "cgunicod",
+      "buildCommand": "C:\\Users\\engue\\AppData\\Local\\Android\\Sdk\\ndk\\25.2.9519653\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\src\\main\\jni\\Android.mk APP_ABI\u003darm64-v8a NDK_ALL_ABIS\u003darm64-v8a NDK_DEBUG\u003d1 APP_PLATFORM\u003dandroid-19 NDK_OUT\u003dD:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\debug\\lib D:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/debug/obj/local/arm64-v8a/objs-debug/garglk/cgunicod.o",
+      "abi": "garglk",
+      "output": "D:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\debug\\obj\\local\\arm64-v8a\\objs-debug\\garglk\\cgunicod.o"
+    },
+    "config-debug-garglk": {
+      "artifactName": "config",
+      "buildCommand": "C:\\Users\\engue\\AppData\\Local\\Android\\Sdk\\ndk\\25.2.9519653\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\src\\main\\jni\\Android.mk APP_ABI\u003darm64-v8a NDK_ALL_ABIS\u003darm64-v8a NDK_DEBUG\u003d1 APP_PLATFORM\u003dandroid-19 NDK_OUT\u003dD:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\debug\\lib D:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/debug/obj/local/arm64-v8a/objs-debug/garglk/config.o",
+      "abi": "garglk",
+      "output": "D:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\debug\\obj\\local\\arm64-v8a\\objs-debug\\garglk\\config.o"
+    },
+    "cgmisc-debug-garglk": {
+      "artifactName": "cgmisc",
+      "buildCommand": "C:\\Users\\engue\\AppData\\Local\\Android\\Sdk\\ndk\\25.2.9519653\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\src\\main\\jni\\Android.mk APP_ABI\u003darm64-v8a NDK_ALL_ABIS\u003darm64-v8a NDK_DEBUG\u003d1 APP_PLATFORM\u003dandroid-19 NDK_OUT\u003dD:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\debug\\lib D:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/debug/obj/local/arm64-v8a/objs-debug/garglk/cgmisc.o",
+      "abi": "garglk",
+      "output": "D:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\debug\\obj\\local\\arm64-v8a\\objs-debug\\garglk\\cgmisc.o"
+    },
+    "gi_dispa-debug-garglk": {
+      "artifactName": "gi_dispa",
+      "buildCommand": "C:\\Users\\engue\\AppData\\Local\\Android\\Sdk\\ndk\\25.2.9519653\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\src\\main\\jni\\Android.mk APP_ABI\u003darm64-v8a NDK_ALL_ABIS\u003darm64-v8a NDK_DEBUG\u003d1 APP_PLATFORM\u003dandroid-19 NDK_OUT\u003dD:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\debug\\lib D:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/debug/obj/local/arm64-v8a/objs-debug/garglk/gi_dispa.o",
+      "abi": "garglk",
+      "output": "D:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\debug\\obj\\local\\arm64-v8a\\objs-debug\\garglk\\gi_dispa.o"
+    },
+    "sndnull-debug-garglk": {
+      "artifactName": "sndnull",
+      "buildCommand": "C:\\Users\\engue\\AppData\\Local\\Android\\Sdk\\ndk\\25.2.9519653\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\src\\main\\jni\\Android.mk APP_ABI\u003darm64-v8a NDK_ALL_ABIS\u003darm64-v8a NDK_DEBUG\u003d1 APP_PLATFORM\u003dandroid-19 NDK_OUT\u003dD:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\debug\\lib D:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/debug/obj/local/arm64-v8a/objs-debug/garglk/sndnull.o",
+      "abi": "garglk",
+      "output": "D:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\debug\\obj\\local\\arm64-v8a\\objs-debug\\garglk\\sndnull.o"
+    },
+    "winblank-debug-garglk": {
+      "artifactName": "winblank",
+      "buildCommand": "C:\\Users\\engue\\AppData\\Local\\Android\\Sdk\\ndk\\25.2.9519653\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\src\\main\\jni\\Android.mk APP_ABI\u003darm64-v8a NDK_ALL_ABIS\u003darm64-v8a NDK_DEBUG\u003d1 APP_PLATFORM\u003dandroid-19 NDK_OUT\u003dD:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\debug\\lib D:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/debug/obj/local/arm64-v8a/objs-debug/garglk/winblank.o",
+      "abi": "garglk",
+      "output": "D:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\debug\\obj\\local\\arm64-v8a\\objs-debug\\garglk\\winblank.o"
+    },
+    "andglk-loader-debug-arm64-v8a": {
+      "artifactName": "andglk-loader",
+      "buildCommand": "C:\\Users\\engue\\AppData\\Local\\Android\\Sdk\\ndk\\25.2.9519653\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\src\\main\\jni\\Android.mk APP_ABI\u003darm64-v8a NDK_ALL_ABIS\u003darm64-v8a NDK_DEBUG\u003d1 APP_PLATFORM\u003dandroid-19 NDK_OUT\u003dD:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\debug\\lib D:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/debug/obj/local/arm64-v8a/libandglk-loader.so",
+      "abi": "arm64-v8a",
+      "output": "D:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\debug\\obj\\local\\arm64-v8a\\libandglk-loader.so"
+    },
+    "sysand-debug-garglk": {
+      "artifactName": "sysand",
+      "buildCommand": "C:\\Users\\engue\\AppData\\Local\\Android\\Sdk\\ndk\\25.2.9519653\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\src\\main\\jni\\Android.mk APP_ABI\u003darm64-v8a NDK_ALL_ABIS\u003darm64-v8a NDK_DEBUG\u003d1 APP_PLATFORM\u003dandroid-19 NDK_OUT\u003dD:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\debug\\lib D:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/debug/obj/local/arm64-v8a/objs-debug/garglk/sysand.o",
+      "abi": "garglk",
+      "output": "D:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\debug\\obj\\local\\arm64-v8a\\objs-debug\\garglk\\sysand.o"
+    },
+    "cgblorb-debug-andglk": {
+      "artifactName": "cgblorb",
+      "buildCommand": "C:\\Users\\engue\\AppData\\Local\\Android\\Sdk\\ndk\\25.2.9519653\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\src\\main\\jni\\Android.mk APP_ABI\u003darm64-v8a NDK_ALL_ABIS\u003darm64-v8a NDK_DEBUG\u003d1 APP_PLATFORM\u003dandroid-19 NDK_OUT\u003dD:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\debug\\lib D:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/debug/obj/local/arm64-v8a/objs-debug/andglk/cgblorb.o",
+      "abi": "andglk",
+      "output": "D:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\debug\\obj\\local\\arm64-v8a\\objs-debug\\andglk\\cgblorb.o"
+    },
+    "nitfol-debug-arm64-v8a": {
+      "artifactName": "nitfol",
+      "buildCommand": "C:\\Users\\engue\\AppData\\Local\\Android\\Sdk\\ndk\\25.2.9519653\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\src\\main\\jni\\Android.mk APP_ABI\u003darm64-v8a NDK_ALL_ABIS\u003darm64-v8a NDK_DEBUG\u003d1 APP_PLATFORM\u003dandroid-19 NDK_OUT\u003dD:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\debug\\lib D:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/debug/obj/local/arm64-v8a/libnitfol.so",
+      "abi": "arm64-v8a",
+      "output": "D:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\debug\\obj\\local\\arm64-v8a\\libnitfol.so"
+    },
+    "andglk-debug-andglk": {
+      "artifactName": "andglk",
+      "buildCommand": "C:\\Users\\engue\\AppData\\Local\\Android\\Sdk\\ndk\\25.2.9519653\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\src\\main\\jni\\Android.mk APP_ABI\u003darm64-v8a NDK_ALL_ABIS\u003darm64-v8a NDK_DEBUG\u003d1 APP_PLATFORM\u003dandroid-19 NDK_OUT\u003dD:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\debug\\lib D:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/debug/obj/local/arm64-v8a/objs-debug/andglk/andglk.o",
+      "abi": "andglk",
+      "output": "D:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\debug\\obj\\local\\arm64-v8a\\objs-debug\\andglk\\andglk.o"
+    },
+    "frotz-debug-arm64-v8a": {
+      "artifactName": "frotz",
+      "buildCommand": "C:\\Users\\engue\\AppData\\Local\\Android\\Sdk\\ndk\\25.2.9519653\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\src\\main\\jni\\Android.mk APP_ABI\u003darm64-v8a NDK_ALL_ABIS\u003darm64-v8a NDK_DEBUG\u003d1 APP_PLATFORM\u003dandroid-19 NDK_OUT\u003dD:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\debug\\lib D:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/debug/obj/local/arm64-v8a/libfrotz.so",
+      "abi": "arm64-v8a",
+      "output": "D:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\debug\\obj\\local\\arm64-v8a\\libfrotz.so"
+    },
+    "window-debug-garglk": {
+      "artifactName": "window",
+      "buildCommand": "C:\\Users\\engue\\AppData\\Local\\Android\\Sdk\\ndk\\25.2.9519653\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\src\\main\\jni\\Android.mk APP_ABI\u003darm64-v8a NDK_ALL_ABIS\u003darm64-v8a NDK_DEBUG\u003d1 APP_PLATFORM\u003dandroid-19 NDK_OUT\u003dD:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\debug\\lib D:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/debug/obj/local/arm64-v8a/objs-debug/garglk/window.o",
+      "abi": "garglk",
+      "output": "D:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\debug\\obj\\local\\arm64-v8a\\objs-debug\\garglk\\window.o"
+    },
+    "cgdate-debug-garglk": {
+      "artifactName": "cgdate",
+      "buildCommand": "C:\\Users\\engue\\AppData\\Local\\Android\\Sdk\\ndk\\25.2.9519653\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\src\\main\\jni\\Android.mk APP_ABI\u003darm64-v8a NDK_ALL_ABIS\u003darm64-v8a NDK_DEBUG\u003d1 APP_PLATFORM\u003dandroid-19 NDK_OUT\u003dD:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\debug\\lib D:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/debug/obj/local/arm64-v8a/objs-debug/garglk/cgdate.o",
+      "abi": "garglk",
+      "output": "D:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\debug\\obj\\local\\arm64-v8a\\objs-debug\\garglk\\cgdate.o"
+    },
+    "cgfref-debug-andglk": {
+      "artifactName": "cgfref",
+      "buildCommand": "C:\\Users\\engue\\AppData\\Local\\Android\\Sdk\\ndk\\25.2.9519653\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\src\\main\\jni\\Android.mk APP_ABI\u003darm64-v8a NDK_ALL_ABIS\u003darm64-v8a NDK_DEBUG\u003d1 APP_PLATFORM\u003dandroid-19 NDK_OUT\u003dD:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\debug\\lib D:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/debug/obj/local/arm64-v8a/objs-debug/andglk/cgfref.o",
+      "abi": "andglk",
+      "output": "D:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\debug\\obj\\local\\arm64-v8a\\objs-debug\\andglk\\cgfref.o"
+    },
+    "cgmisc-debug-andglk": {
+      "artifactName": "cgmisc",
+      "buildCommand": "C:\\Users\\engue\\AppData\\Local\\Android\\Sdk\\ndk\\25.2.9519653\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\src\\main\\jni\\Android.mk APP_ABI\u003darm64-v8a NDK_ALL_ABIS\u003darm64-v8a NDK_DEBUG\u003d1 APP_PLATFORM\u003dandroid-19 NDK_OUT\u003dD:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\debug\\lib D:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/debug/obj/local/arm64-v8a/objs-debug/andglk/cgmisc.o",
+      "abi": "andglk",
+      "output": "D:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\debug\\obj\\local\\arm64-v8a\\objs-debug\\andglk\\cgmisc.o"
+    },
+    "scott-debug-arm64-v8a": {
+      "artifactName": "scott",
+      "buildCommand": "C:\\Users\\engue\\AppData\\Local\\Android\\Sdk\\ndk\\25.2.9519653\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\src\\main\\jni\\Android.mk APP_ABI\u003darm64-v8a NDK_ALL_ABIS\u003darm64-v8a NDK_DEBUG\u003d1 APP_PLATFORM\u003dandroid-19 NDK_OUT\u003dD:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\debug\\lib D:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/debug/obj/local/arm64-v8a/libscott.so",
+      "abi": "arm64-v8a",
+      "output": "D:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\debug\\obj\\local\\arm64-v8a\\libscott.so"
+    },
+    "git-debug-arm64-v8a": {
+      "artifactName": "git",
+      "buildCommand": "C:\\Users\\engue\\AppData\\Local\\Android\\Sdk\\ndk\\25.2.9519653\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\src\\main\\jni\\Android.mk APP_ABI\u003darm64-v8a NDK_ALL_ABIS\u003darm64-v8a NDK_DEBUG\u003d1 APP_PLATFORM\u003dandroid-19 NDK_OUT\u003dD:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\debug\\lib D:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/debug/obj/local/arm64-v8a/libgit.so",
+      "abi": "arm64-v8a",
+      "output": "D:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\debug\\obj\\local\\arm64-v8a\\libgit.so"
+    },
+    "gi_blorb-debug-andglk": {
+      "artifactName": "gi_blorb",
+      "buildCommand": "C:\\Users\\engue\\AppData\\Local\\Android\\Sdk\\ndk\\25.2.9519653\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\src\\main\\jni\\Android.mk APP_ABI\u003darm64-v8a NDK_ALL_ABIS\u003darm64-v8a NDK_DEBUG\u003d1 APP_PLATFORM\u003dandroid-19 NDK_OUT\u003dD:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\debug\\lib D:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/debug/obj/local/arm64-v8a/objs-debug/andglk/gi_blorb.o",
+      "abi": "andglk",
+      "output": "D:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\debug\\obj\\local\\arm64-v8a\\objs-debug\\andglk\\gi_blorb.o"
+    },
+    "cgstream-debug-andglk": {
+      "artifactName": "cgstream",
+      "buildCommand": "C:\\Users\\engue\\AppData\\Local\\Android\\Sdk\\ndk\\25.2.9519653\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\src\\main\\jni\\Android.mk APP_ABI\u003darm64-v8a NDK_ALL_ABIS\u003darm64-v8a NDK_DEBUG\u003d1 APP_PLATFORM\u003dandroid-19 NDK_OUT\u003dD:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\debug\\lib D:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/debug/obj/local/arm64-v8a/objs-debug/andglk/cgstream.o",
+      "abi": "andglk",
+      "output": "D:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\debug\\obj\\local\\arm64-v8a\\objs-debug\\andglk\\cgstream.o"
+    }
+  }
+}

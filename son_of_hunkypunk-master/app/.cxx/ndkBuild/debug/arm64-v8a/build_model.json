@@ -1,0 +1,60 @@
+{
+  "variant": {
+    "module": {
+      "rootBuildGradleFolder": "D:\\Android\\son_of_hunkypunk-master",
+      "sdkFolder": "C:\\Users\\engue\\AppData\\Local\\Android\\Sdk",
+      "isNativeCompilerSettingsCacheEnabled": false,
+      "isBuildOnlyTargetAbiEnabled": true,
+      "splitsAbiFilterSet": [],
+      "intermediatesFolder": "D:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates",
+      "gradleModulePathName": ":app",
+      "moduleRootFolder": "D:\\Android\\son_of_hunkypunk-master\\app",
+      "makeFile": "D:\\Android\\son_of_hunkypunk-master\\app\\src\\main\\jni\\Android.mk",
+      "buildSystem": "NDK_BUILD",
+      "compilerSettingsCacheFolder": "D:\\Android\\son_of_hunkypunk-master\\.cxx",
+      "cxxFolder": "D:\\Android\\son_of_hunkypunk-master\\app\\.cxx",
+      "ndkFolder": "C:\\Users\\engue\\AppData\\Local\\Android\\Sdk\\ndk\\25.2.9519653",
+      "ndkVersion": "25.2.9519653",
+      "ndkSupportedAbiList": [
+        "ARMEABI_V7A",
+        "ARM64_V8A",
+        "X86",
+        "X86_64"
+      ],
+      "ndkDefaultAbiList": [
+        "ARMEABI_V7A",
+        "ARM64_V8A",
+        "X86",
+        "X86_64"
+      ],
+      "cmakeToolchainFile": "."
+    },
+    "buildSystemArgumentList": [],
+    "cFlagList": [],
+    "cppFlagsList": [],
+    "variantName": "debug",
+    "soFolder": "D:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\debug\\lib",
+    "objFolder": "D:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\debug\\obj\\local",
+    "jsonFolder": "D:\\Android\\son_of_hunkypunk-master\\app\\.cxx\\ndkBuild\\debug",
+    "gradleBuildOutputFolder": "D:\\Android\\son_of_hunkypunk-master\\app\\.cxx\\cxx\\debug",
+    "isDebuggableEnabled": true,
+    "validAbiList": [
+      "ARMEABI_V7A",
+      "ARM64_V8A",
+      "X86",
+      "X86_64"
+    ],
+    "buildTargetSet": []
+  },
+  "abi": "ARM64_V8A",
+  "abiPlatformVersion": 19,
+  "cxxBuildFolder": "D:\\Android\\son_of_hunkypunk-master\\app\\.cxx\\ndkBuild\\debug\\arm64-v8a",
+  "jsonFile": "D:\\Android\\son_of_hunkypunk-master\\app\\.cxx\\ndkBuild\\debug\\arm64-v8a\\android_gradle_build.json",
+  "gradleBuildOutputFolder": "D:\\Android\\son_of_hunkypunk-master\\app\\.cxx\\cxx\\debug\\arm64-v8a",
+  "objFolder": "D:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\debug\\obj\\local\\arm64-v8a",
+  "buildCommandFile": "D:\\Android\\son_of_hunkypunk-master\\app\\.cxx\\ndkBuild\\debug\\arm64-v8a\\build_command.txt",
+  "buildOutputFile": "D:\\Android\\son_of_hunkypunk-master\\app\\.cxx\\ndkBuild\\debug\\arm64-v8a\\build_output.txt",
+  "modelOutputFile": "D:\\Android\\son_of_hunkypunk-master\\app\\.cxx\\ndkBuild\\debug\\arm64-v8a\\build_model.json",
+  "jsonGenerationLoggingRecordFile": "D:\\Android\\son_of_hunkypunk-master\\app\\.cxx\\ndkBuild\\debug\\arm64-v8a\\json_generation_record.json",
+  "compileCommandsJsonFile": "D:\\Android\\son_of_hunkypunk-master\\app\\.cxx\\ndkBuild\\debug\\arm64-v8a\\compile_commands.json"
+}
