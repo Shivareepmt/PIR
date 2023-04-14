@@ -27,6 +27,7 @@ import org.andglkmod.hunkypunk.R.id;
 import org.andglkmod.ifdb.IFDb;
 import org.andglkmod.glk.Utils;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
@@ -173,6 +174,7 @@ public class GameDetails extends Activity implements OnClickListener,AppCompatCa
         return null;
     }
 
+    @SuppressLint("ResourceType")
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         super.onCreateOptionsMenu(menu);

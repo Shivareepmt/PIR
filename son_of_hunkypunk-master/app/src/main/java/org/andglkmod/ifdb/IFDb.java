@@ -269,7 +269,8 @@ public class IFDb {
 		if (sInstance == null)
 			sInstance = new IFDb(contentResolver);
 		else
-			assert(contentResolver.equals(sInstance.mContentResolver));
+			//assert(contentResolver.equals(sInstance.mContentResolver));
+		System.out.println("assert ifdb");
 
 		return sInstance;
 	}

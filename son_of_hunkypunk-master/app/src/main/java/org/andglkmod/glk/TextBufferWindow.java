@@ -43,8 +43,6 @@ import android.os.SystemClock;
 import androidx.appcompat.widget.AppCompatEditText;
 import androidx.appcompat.widget.AppCompatTextView;
 import androidx.cardview.widget.CardView;
-
-import android.speech.tts.TextToSpeech;
 import android.text.Editable;
 import android.text.Layout;
 import android.text.Selection;
@@ -72,10 +70,17 @@ import android.widget.LinearLayout.LayoutParams;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.insatoulouse.pir.SpeechRecognitionManager;
 import com.insatoulouse.pir.TextToSpeechManager;
 
 
 public class TextBufferWindow extends Window {
+    TextToSpeechManager TTS = new TextToSpeechManager(Glk.getInstance().getContext());
+    private SpeechRecognitionManager speechRecognitionManager;
+    private SpeechRecognitionListener speechRecognitionListener;
+    public boolean isSpeechRecognitionActive = false;
+
+
     public static class _SavedState implements Parcelable {
         public static final Parcelable.Creator<_SavedState> CREATOR = new Parcelable.Creator<_SavedState>() {
             @Override
@@ -988,7 +993,18 @@ public class TextBufferWindow extends Window {
         public void print(CharSequence text) {
             final int start = length() - 1;
             appendEx(text);
-            //// C'est ICI TTS
+            System.out.println(text.toString());
+            TTS.speakText(text.toString(),new TextToSpeechManager.TextToSpeechCallback() {
+                @Override
+                public void onSpeechCompleted() {
+                    // Handle speech synthesis completed
+                }
+
+                @Override
+                public void onSpeechCanceled() {
+                    // Handle speech synthesis canceled
+                }
+            });
             Editable e = getEditableText();
             Utils.beautify(e, start);
         }
@@ -1042,6 +1058,59 @@ public class TextBufferWindow extends Window {
     private CharSequence mCommandText = null;
     private EditText mCommandView = null;
     private Object mLineInputSpan;
+
+    public interface SpeechRecognitionListener { //added for PIR
+        void onSpeechRecognitionResult(String recognizedText);
+        void onSpeechRecognitionError();
+    }
+
+    private void processSpeechInput(String text) { //added for PIR
+        SpannableString spannable = new SpannableString(text);
+        Object sp = stylehints.getSpan(mContext, Glk.STYLE_INPUT, false);
+        if (spannable.length() > 0) {
+            spannable.setSpan(sp, 0, spannable.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        }
+        lineInputAccepted(spannable);
+    }
+
+    public void toggleSpeechRecognition() { //added for PIR
+        if (isSpeechRecognitionActive) {
+            // Stop speech recognition
+            speechRecognitionManager.stopContinuousRecognition();
+            isSpeechRecognitionActive = false;
+        } else {
+            // Start speech recognition
+            speechRecognitionManager.startContinuousRecognition(new SpeechRecognitionManager.SpeechRecognitionCallback() {
+                @Override
+                public void onRecognitionResult(String recognizedText) {
+                    // Update the text input area with the recognized text
+                    // appendTextToInput(recognizedText);
+
+                    // Set the recognized text as the user input
+                    mActiveCommand.setText(recognizedText);
+                    processSpeechInput(recognizedText);
+
+                    // Notify the speech recognition listener of the result
+                    if (speechRecognitionListener != null) {
+                        speechRecognitionListener.onSpeechRecognitionResult(recognizedText);
+                    }
+                }
+
+                @Override
+                public void onRecognitionCanceled() {
+                    // Notify the speech recognition listener of the error
+                    if (speechRecognitionListener != null) {
+                        speechRecognitionListener.onSpeechRecognitionError();
+                    }
+                }
+            });
+            isSpeechRecognitionActive = true;
+        }
+    }
+
+    public void setSpeechRecognitionListener(SpeechRecognitionListener listener) {
+        speechRecognitionListener = listener;
+    }
 
     /*Every window has a rock. This is a value you provide when the window is created;
       you can use it however you want.*/
@@ -1113,6 +1182,7 @@ public class TextBufferWindow extends Window {
                         mCommand2.setImeOptions(EditorInfo.IME_FLAG_NO_EXTRACT_UI);
                         mCommand2.clear();
                         mCommand2.disableInput();
+
                         //mCommand2.setBackgroundColor(Color.LTGRAY);
                         ToggleCommandView();
 

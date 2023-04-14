@@ -71,6 +71,8 @@
     <string name="delete_title">Delete Game?</string>
     <string name="edit_title">Edit Game Title</string>
     <string name="delete_confirm">Really delete this game?</string>
+    <string name="subscription_key">a7e40487a1ff409d8dc1994952b90e01</string>
+    <string name="service_region">westeurope</string>
 
     <string name="invalid_if_dir">I\'m unable to use the current storage location.
         Please go to Preferences and update the "IF folder path" to a valid location.
