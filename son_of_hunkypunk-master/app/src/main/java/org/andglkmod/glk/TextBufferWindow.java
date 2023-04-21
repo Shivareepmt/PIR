@@ -28,6 +28,7 @@ import java.util.regex.Pattern;
 import org.andglkmod.glk.Styles.StyleSpan;
 import org.andglkmod.hunkypunk.R;
 
+import android.Manifest;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -43,6 +44,9 @@ import android.os.SystemClock;
 import androidx.appcompat.widget.AppCompatEditText;
 import androidx.appcompat.widget.AppCompatTextView;
 import androidx.cardview.widget.CardView;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+
 import android.text.Editable;
 import android.text.Layout;
 import android.text.Selection;
@@ -64,6 +68,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.HorizontalScrollView;
+import android.widget.ImageButton;
 import android.widget.ScrollView;
 import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
@@ -76,7 +81,7 @@ import com.insatoulouse.pir.TextToSpeechManager;
 
 public class TextBufferWindow extends Window {
     TextToSpeechManager TTS = new TextToSpeechManager(Glk.getInstance().getContext());
-    private SpeechRecognitionManager speechRecognitionManager;
+    private SpeechRecognitionManager speechRecognitionManager = new SpeechRecognitionManager(Glk.getInstance().getContext());
     private SpeechRecognitionListener speechRecognitionListener;
     public boolean isSpeechRecognitionActive = false;
 
@@ -1207,14 +1212,25 @@ public class TextBufferWindow extends Window {
                         int bg = Color.parseColor(shortcutsColor);
 
                         if (sharedShortcutPrefs.getBoolean("enablelist", true))
-                            for (int i = 0; i < sharedShortcutIDs.getAll().size(); i++) {
+                            for (int i = 0; i < 1; i++) {
                                 String title = sharedShortcutIDs.getString(i + "", "");
                                 final String command = sharedShortcuts.getString(title, "");
 
                                 View shortcutView = LayoutInflater.from(mContext).inflate(R.layout.shortcut_view, null);
                                 CardView cardView = (CardView) shortcutView.findViewById(R.id.cardview);
                                 final TextView textView = (TextView) shortcutView.findViewById(R.id.shortcuttitle);
+                                final ImageButton buttonSpeech = shortcutView.findViewById(R.id.toggle_speachrecognition) ;
+                                buttonSpeech.setOnClickListener(new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View view) {
+
+                                        System.out.println("On ARRIVE LA") ;
+                                        toggleSpeechRecognition();
+                                        System.out.println("On ARRIVE APRES") ;
+                                    }
+                                });
                                 textView.setText(title);
+
 
                                 textView.setTextColor(Color.BLACK);
 
@@ -1226,15 +1242,7 @@ public class TextBufferWindow extends Window {
 
 
                                 textView.setTag(command);
-                                cardView.setOnClickListener(new View.OnClickListener() {
-                                    @Override
-                                    public void onClick(View v) {
-                                        if (command.endsWith("$"))
-                                            shortcutCommandEnter(textView);
-                                        else
-                                            shortcutCommand(textView);
-                                    }
-                                });
+
 
                                 viewGroup.addView(shortcutView);
                             }
