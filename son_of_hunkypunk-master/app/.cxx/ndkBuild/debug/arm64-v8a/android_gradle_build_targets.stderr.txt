@@ -1,0 +1,154 @@
+D:/Android/son_of_hunkypunk-master/app/src/main/jni/babel/babel_handler.c:292:4: warning: add explicit braces to avoid dangling else [-Wdangling-else]
+   else return NULL;
+   ^
+1 warning generated.
+D:/Android/son_of_hunkypunk-master/app/src/main/jni/babel/ifiction.c:313:4: warning: add explicit braces to avoid dangling else [-Wdangling-else]
+   else parent->occurences[i]=1;
+   ^
+1 warning generated.
+D:/Android/son_of_hunkypunk-master/app/src/main/jni/frotz/files.c:132:2: warning: implicit declaration of function 'glk_put_char_stream_uni' is invalid in C99 [-Wimplicit-function-declaration]
+        fputwc (c, sfp); script_width++;
+        ^
+D:/Android/son_of_hunkypunk-master/app/src/main/jni/frotz/glkio.h:51:26: note: expanded from macro 'fputwc'
+#define fputwc(c, f)    (glk_put_char_stream_uni(f, (zchar)(c)), 0);
+                         ^
+1 warning generated.
+D:/Android/son_of_hunkypunk-master/app/src/main/jni/frotz/glkmisc.c:369:2: warning: implicit declaration of function 'glk_request_char_event_uni' is invalid in C99 [-Wimplicit-function-declaration]
+        glk_request_char_event_uni(win);
+        ^
+D:/Android/son_of_hunkypunk-master/app/src/main/jni/frotz/glkmisc.c:377:4: warning: implicit declaration of function 'gos_update_height' is invalid in C99 [-Wimplicit-function-declaration]
+                        gos_update_height();
+                        ^
+D:/Android/son_of_hunkypunk-master/app/src/main/jni/frotz/glkmisc.c:423:3: warning: implicit declaration of function 'glk_request_line_event_uni' is invalid in C99 [-Wimplicit-function-declaration]
+                glk_request_line_event_uni(win, buf, max, os_string_length(buf));
+                ^
+D:/Android/son_of_hunkypunk-master/app/src/main/jni/frotz/glkmisc.c:434:4: warning: implicit declaration of function 'gos_update_height' is invalid in C99 [-Wimplicit-function-declaration]
+                        gos_update_height();
+                        ^
+4 warnings generated.
+D:/Android/son_of_hunkypunk-master/app/src/main/jni/frotz/main.c:217:5: warning: implicit declaration of function 'os_init_setup' is invalid in C99 [-Wimplicit-function-declaration]
+    os_init_setup ();
+    ^
+D:/Android/son_of_hunkypunk-master/app/src/main/jni/frotz/main.c:220:5: warning: implicit declaration of function 'init_buffer' is invalid in C99 [-Wimplicit-function-declaration]
+    init_buffer ();
+    ^
+2 warnings generated.
+D:/Android/son_of_hunkypunk-master/app/src/main/jni/frotz/glkscreen.c:329:2: warning: implicit declaration of function 'glk_put_buffer_uni' is invalid in C99 [-Wimplicit-function-declaration]
+        glk_put_buffer_uni(buf, h_screen_cols);
+        ^
+D:/Android/son_of_hunkypunk-master/app/src/main/jni/frotz/glkscreen.c:380:6: warning: implicit declaration of function 'glk_put_char_uni' is invalid in C99 [-Wimplicit-function-declaration]
+                                        glk_put_char_uni(c);
+                                        ^
+D:/Android/son_of_hunkypunk-master/app/src/main/jni/frotz/glkscreen.c:384:6: warning: implicit declaration of function 'glk_put_char_uni' is invalid in C99 [-Wimplicit-function-declaration]
+                                        glk_put_char_uni(c);
+                                        ^
+D:/Android/son_of_hunkypunk-master/app/src/main/jni/frotz/glkscreen.c:397:6: warning: implicit declaration of function 'glk_put_char_uni' is invalid in C99 [-Wimplicit-function-declaration]
+                                        glk_put_char_uni(c);
+                                        ^
+D:/Android/son_of_hunkypunk-master/app/src/main/jni/frotz/glkscreen.c:401:6: warning: implicit declaration of function 'glk_put_char_uni' is invalid in C99 [-Wimplicit-function-declaration]
+                                        glk_put_char_uni(c);
+                                        ^
+D:/Android/son_of_hunkypunk-master/app/src/main/jni/frotz/glkscreen.c:412:8: warning: implicit declaration of function 'glk_put_char_uni' is invalid in C99 [-Wimplicit-function-declaration]
+                else glk_put_char_uni(c);
+                     ^
+6 warnings generated.
+D:/Android/son_of_hunkypunk-master/app/src/main/jni/andglk/cgfref.c:181:16: warning: 'tempnam' is deprecated: tempnam is unsafe, use mkstemp or tmpfile instead [-Wdeprecated-declarations]
+    filename = tempnam(tempdir, "gargtmp");
+               ^
+C:/Users/engue/AppData/Local/Android/Sdk/ndk/25.2.9519653/build/../toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/stdio.h:170:5: note: 'tempnam' has been explicitly marked deprecated here
+    __warnattr("tempnam is unsafe, use mkstemp or tmpfile instead");
+    ^
+C:/Users/engue/AppData/Local/Android/Sdk/ndk/25.2.9519653/build/../toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/sys/cdefs.h:135:40: note: expanded from macro '__warnattr'
+#define __warnattr(msg) __attribute__((deprecated(msg)))
+                                       ^
+1 warning generated.
+D:/Android/son_of_hunkypunk-master/app/src/main/jni/git/operands.c:355:68: warning: passing 'git_uint32 *' (aka 'unsigned int *') to parameter of type 'git_sint32 *' (aka 'int *') converts between pointers to integer types with different sign [-Wpointer-sign]
+            branchConst = parseLoad (pc, reg_L1, modes[1], size32, &branchVal);
+                                                                   ^~~~~~~~~~
+D:/Android/son_of_hunkypunk-master/app/src/main/jni/git/operands.c:6:95: note: passing argument to parameter 'constVal' here
+git_uint32 parseLoad (git_uint32 * pc, LoadReg reg, int mode, TransferSize size, git_sint32 * constVal)
+                                                                                              ^
+D:/Android/son_of_hunkypunk-master/app/src/main/jni/git/operands.c:359:68: warning: passing 'git_uint32 *' (aka 'unsigned int *') to parameter of type 'git_sint32 *' (aka 'int *') converts between pointers to integer types with different sign [-Wpointer-sign]
+            branchConst = parseLoad (pc, reg_L1, modes[1], size32, &branchVal);
+                                                                   ^~~~~~~~~~
+D:/Android/son_of_hunkypunk-master/app/src/main/jni/git/operands.c:6:95: note: passing argument to parameter 'constVal' here
+git_uint32 parseLoad (git_uint32 * pc, LoadReg reg, int mode, TransferSize size, git_sint32 * constVal)
+                                                                                              ^
+D:/Android/son_of_hunkypunk-master/app/src/main/jni/git/operands.c:363:68: warning: passing 'git_uint32 *' (aka 'unsigned int *') to parameter of type 'git_sint32 *' (aka 'int *') converts between pointers to integer types with different sign [-Wpointer-sign]
+            branchConst = parseLoad (pc, reg_L1, modes[1], size32, &branchVal);
+                                                                   ^~~~~~~~~~
+D:/Android/son_of_hunkypunk-master/app/src/main/jni/git/operands.c:6:95: note: passing argument to parameter 'constVal' here
+git_uint32 parseLoad (git_uint32 * pc, LoadReg reg, int mode, TransferSize size, git_sint32 * constVal)
+                                                                                              ^
+D:/Android/son_of_hunkypunk-master/app/src/main/jni/git/operands.c:368:68: warning: passing 'git_uint32 *' (aka 'unsigned int *') to parameter of type 'git_sint32 *' (aka 'int *') converts between pointers to integer types with different sign [-Wpointer-sign]
+            branchConst = parseLoad (pc, reg_L1, modes[1], size32, &branchVal);
+                                                                   ^~~~~~~~~~
+D:/Android/son_of_hunkypunk-master/app/src/main/jni/git/operands.c:6:95: note: passing argument to parameter 'constVal' here
+git_uint32 parseLoad (git_uint32 * pc, LoadReg reg, int mode, TransferSize size, git_sint32 * constVal)
+                                                                                              ^
+4 warnings generated.
+D:/Android/son_of_hunkypunk-master/app/src/main/jni/garglk/cgfref.c:140:16: warning: 'tempnam' is deprecated: tempnam is unsafe, use mkstemp or tmpfile instead [-Wdeprecated-declarations]
+    filename = tempnam(tempdir, "gargtmp");
+               ^
+C:/Users/engue/AppData/Local/Android/Sdk/ndk/25.2.9519653/build/../toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/stdio.h:170:5: note: 'tempnam' has been explicitly marked deprecated here
+    __warnattr("tempnam is unsafe, use mkstemp or tmpfile instead");
+    ^
+C:/Users/engue/AppData/Local/Android/Sdk/ndk/25.2.9519653/build/../toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/sys/cdefs.h:135:40: note: expanded from macro '__warnattr'
+#define __warnattr(msg) __attribute__((deprecated(msg)))
+                                       ^
+1 warning generated.
+D:/Android/son_of_hunkypunk-master/app/src/main/jni/garglk/cgstream.c:783:26: warning: assigning to 'unsigned char *' from 'char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+            for (lx=0, cx=buf; lx<len; lx++, cx++)
+                         ^~~~
+D:/Android/son_of_hunkypunk-master/app/src/main/jni/garglk/cgstream.c:952:22: warning: assigning to 'unsigned char *' from 'char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+        for (lx=0, cx=buf+len-1; lx<len; lx++, cx--)
+                     ^~~~~~~~~~
+2 warnings generated.
+D:/Android/son_of_hunkypunk-master/app/src/main/jni/garglk/window.c:299:5: warning: implicit declaration of function 'gli_windows_rearrange' is invalid in C99 [-Wimplicit-function-declaration]
+    gli_windows_rearrange();
+    ^
+D:/Android/son_of_hunkypunk-master/app/src/main/jni/garglk/window.c:450:9: warning: implicit declaration of function 'gli_windows_rearrange' is invalid in C99 [-Wimplicit-function-declaration]
+        gli_windows_rearrange();
+        ^
+D:/Android/son_of_hunkypunk-master/app/src/main/jni/garglk/window.c:573:5: warning: implicit declaration of function 'gli_windows_rearrange' is invalid in C99 [-Wimplicit-function-declaration]
+    gli_windows_rearrange();
+    ^
+D:/Android/son_of_hunkypunk-master/app/src/main/jni/garglk/window.c:841:5: warning: implicit declaration of function 'gli_windows_rearrange' is invalid in C99 [-Wimplicit-function-declaration]
+    gli_windows_rearrange();
+    ^
+4 warnings generated.
+D:/Android/son_of_hunkypunk-master/app/src/main/jni/garglk/config.c:449:20: warning: assigning to 'char *' from 'unsigned char[3]' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+                bg = gli_window_color;
+                   ^ ~~~~~~~~~~~~~~~~
+1 warning generated.
+D:/Android/son_of_hunkypunk-master/app/src/main/jni/garglk/sysand.c:169:2: warning: implicit declaration of function 'gli_streams_close_all' is invalid in C99 [-Wimplicit-function-declaration]
+        gli_streams_close_all();
+        ^
+1 warning generated.
+D:/Android/son_of_hunkypunk-master/app/src/main/jni/tads/tads2/qas.c:121:20: warning: result of comparison of constant -1 with expression of type 'char' is always false [-Wtautological-constant-out-of-range-compare]
+        else if (c == EOF )
+                 ~ ^  ~~~
+1 warning generated.
+D:/Android/son_of_hunkypunk-master/app/src/main/jni/tads/tads3/vmfilobj.cpp:1331:10: warning: case value not in enumerated type 'vm_datatype_t' [-Wswitch]
+    case VMOBJFILE_TAG_ENUM:
+         ^
+D:/Android/son_of_hunkypunk-master/app/src/main/jni/tads/tads3/vmfilobj.h:442:33: note: expanded from macro 'VMOBJFILE_TAG_ENUM'
+#define VMOBJFILE_TAG_ENUM      0x20
+                                ^
+D:/Android/son_of_hunkypunk-master/app/src/main/jni/tads/tads3/vmfilobj.cpp:1371:10: warning: case value not in enumerated type 'vm_datatype_t' [-Wswitch]
+    case VMOBJFILE_TAG_BIGNUM:
+         ^
+D:/Android/son_of_hunkypunk-master/app/src/main/jni/tads/tads3/vmfilobj.h:448:33: note: expanded from macro 'VMOBJFILE_TAG_BIGNUM'
+#define VMOBJFILE_TAG_BIGNUM    0x21
+                                ^
+D:/Android/son_of_hunkypunk-master/app/src/main/jni/tads/tads3/vmfilobj.cpp:1377:10: warning: case value not in enumerated type 'vm_datatype_t' [-Wswitch]
+    case VMOBJFILE_TAG_BYTEARRAY:
+         ^
+D:/Android/son_of_hunkypunk-master/app/src/main/jni/tads/tads3/vmfilobj.h:454:33: note: expanded from macro 'VMOBJFILE_TAG_BYTEARRAY'
+#define VMOBJFILE_TAG_BYTEARRAY 0x22
+                                ^
+3 warnings generated.
+D:/Android/son_of_hunkypunk-master/app/src/main/jni/tads/tads3/vmhash.cpp:211:9: warning: delete called on 'CVmHashFunc' that is abstract but has non-virtual destructor [-Wdelete-abstract-non-virtual-dtor]
+        delete hash_function_;
+        ^
+1 warning generated.

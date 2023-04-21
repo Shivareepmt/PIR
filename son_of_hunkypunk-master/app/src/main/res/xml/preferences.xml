@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:key="preferences"
+    android:title="@string/preferences">
+    <PreferenceCategory android:title="Fonts">
+        <ListPreference
+            android:defaultValue="Droid Serif"
+            android:enabled="true"
+            android:entries="@array/fontNameArray"
+            android:entryValues="@array/fontNameArray"
+            android:key="fontFileName"
+            android:summary="Custom TTF font file"
+            android:title="Font file name" />
+        <ListPreference
+            android:defaultValue="16"
+            android:entries="@array/fontSizeArray"
+            android:entryValues="@array/fontSizeArray"
+            android:key="fontSize"
+            android:summary="font size"
+            android:title="Font size" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Copy words and shortcuts">
+        <SwitchPreference
+            android:id="@+id/enable_list"
+            android:defaultValue="true"
+            android:key="enablelist"
+            android:title="Shortcuts list" />
+        <SwitchPreference
+            android:id="@+id/Longpresstocopy"
+            android:defaultValue="true"
+            android:key="enablelongpress"
+            android:title="Long press to copy" />
+        <Preference
+            android:key="manageshortcuts"
+            android:title="@string/manageshortcuts" />
+
+    </PreferenceCategory>
+    <PreferenceCategory android:title="File Path">
+        <Preference
+            android:key="setIFDir"
+            android:summary="Your new IF-Directory"
+            android:title="@string/add"
+            android:enabled="false"
+            />
+        <!--
+        <Preference
+            android:key="defaultif"
+            android:summary="Your default IF-Directory"
+            android:title="@string/ifdef"
+            android:enabled="false" />
+        -->
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Night Mode">
+        <SwitchPreference
+            android:defaultValue="false"
+            android:hint="NightOn"
+            android:key="day_night"
+            android:title="@string/dayNight" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

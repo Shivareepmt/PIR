@@ -1,0 +1,191 @@
+{
+  "buildFiles": [
+    "D:\\Android\\son_of_hunkypunk-master\\app\\src\\main\\jni\\Android.mk"
+  ],
+  "cleanCommands": [
+    "C:\\Users\\engue\\AppData\\Local\\Android\\Sdk\\ndk\\25.2.9519653\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\src\\main\\jni\\Android.mk APP_ABI\u003dx86 NDK_ALL_ABIS\u003dx86 NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-19 NDK_OUT\u003dD:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\release\\lib clean"
+  ],
+  "buildTargetsCommand": "C:\\Users\\engue\\AppData\\Local\\Android\\Sdk\\ndk\\25.2.9519653\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\src\\main\\jni\\Android.mk APP_ABI\u003dx86 NDK_ALL_ABIS\u003dx86 NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-19 NDK_OUT\u003dD:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\release\\lib {LIST_OF_TARGETS_TO_BUILD}",
+  "libraries": {
+    "tads-release-x86": {
+      "artifactName": "tads",
+      "buildCommand": "C:\\Users\\engue\\AppData\\Local\\Android\\Sdk\\ndk\\25.2.9519653\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\src\\main\\jni\\Android.mk APP_ABI\u003dx86 NDK_ALL_ABIS\u003dx86 NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-19 NDK_OUT\u003dD:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\release\\lib D:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/release/obj/local/x86/libtads.so",
+      "abi": "x86",
+      "output": "D:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\release\\obj\\local\\x86\\libtads.so"
+    },
+    "cgblorb-release-garglk": {
+      "artifactName": "cgblorb",
+      "buildCommand": "C:\\Users\\engue\\AppData\\Local\\Android\\Sdk\\ndk\\25.2.9519653\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\src\\main\\jni\\Android.mk APP_ABI\u003dx86 NDK_ALL_ABIS\u003dx86 NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-19 NDK_OUT\u003dD:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\release\\lib D:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/release/obj/local/x86/objs/garglk/cgblorb.o",
+      "abi": "garglk",
+      "output": "D:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\release\\obj\\local\\x86\\objs\\garglk\\cgblorb.o"
+    },
+    "git-release-x86": {
+      "artifactName": "git",
+      "buildCommand": "C:\\Users\\engue\\AppData\\Local\\Android\\Sdk\\ndk\\25.2.9519653\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\src\\main\\jni\\Android.mk APP_ABI\u003dx86 NDK_ALL_ABIS\u003dx86 NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-19 NDK_OUT\u003dD:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\release\\lib D:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/release/obj/local/x86/libgit.so",
+      "abi": "x86",
+      "output": "D:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\release\\obj\\local\\x86\\libgit.so"
+    },
+    "cgstream-release-garglk": {
+      "artifactName": "cgstream",
+      "buildCommand": "C:\\Users\\engue\\AppData\\Local\\Android\\Sdk\\ndk\\25.2.9519653\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\src\\main\\jni\\Android.mk APP_ABI\u003dx86 NDK_ALL_ABIS\u003dx86 NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-19 NDK_OUT\u003dD:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\release\\lib D:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/release/obj/local/x86/objs/garglk/cgstream.o",
+      "abi": "garglk",
+      "output": "D:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\release\\obj\\local\\x86\\objs\\garglk\\cgstream.o"
+    },
+    "event-release-garglk": {
+      "artifactName": "event",
+      "buildCommand": "C:\\Users\\engue\\AppData\\Local\\Android\\Sdk\\ndk\\25.2.9519653\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\src\\main\\jni\\Android.mk APP_ABI\u003dx86 NDK_ALL_ABIS\u003dx86 NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-19 NDK_OUT\u003dD:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\release\\lib D:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/release/obj/local/x86/objs/garglk/event.o",
+      "abi": "garglk",
+      "output": "D:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\release\\obj\\local\\x86\\objs\\garglk\\event.o"
+    },
+    "gi_blorb-release-garglk": {
+      "artifactName": "gi_blorb",
+      "buildCommand": "C:\\Users\\engue\\AppData\\Local\\Android\\Sdk\\ndk\\25.2.9519653\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\src\\main\\jni\\Android.mk APP_ABI\u003dx86 NDK_ALL_ABIS\u003dx86 NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-19 NDK_OUT\u003dD:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\release\\lib D:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/release/obj/local/x86/objs/garglk/gi_blorb.o",
+      "abi": "garglk",
+      "output": "D:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\release\\obj\\local\\x86\\objs\\garglk\\gi_blorb.o"
+    },
+    "gi_blorb-release-andglk": {
+      "artifactName": "gi_blorb",
+      "buildCommand": "C:\\Users\\engue\\AppData\\Local\\Android\\Sdk\\ndk\\25.2.9519653\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\src\\main\\jni\\Android.mk APP_ABI\u003dx86 NDK_ALL_ABIS\u003dx86 NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-19 NDK_OUT\u003dD:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\release\\lib D:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/release/obj/local/x86/objs/andglk/gi_blorb.o",
+      "abi": "andglk",
+      "output": "D:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\release\\obj\\local\\x86\\objs\\andglk\\gi_blorb.o"
+    },
+    "cgunicod-release-garglk": {
+      "artifactName": "cgunicod",
+      "buildCommand": "C:\\Users\\engue\\AppData\\Local\\Android\\Sdk\\ndk\\25.2.9519653\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\src\\main\\jni\\Android.mk APP_ABI\u003dx86 NDK_ALL_ABIS\u003dx86 NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-19 NDK_OUT\u003dD:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\release\\lib D:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/release/obj/local/x86/objs/garglk/cgunicod.o",
+      "abi": "garglk",
+      "output": "D:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\release\\obj\\local\\x86\\objs\\garglk\\cgunicod.o"
+    },
+    "config-release-garglk": {
+      "artifactName": "config",
+      "buildCommand": "C:\\Users\\engue\\AppData\\Local\\Android\\Sdk\\ndk\\25.2.9519653\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\src\\main\\jni\\Android.mk APP_ABI\u003dx86 NDK_ALL_ABIS\u003dx86 NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-19 NDK_OUT\u003dD:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\release\\lib D:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/release/obj/local/x86/objs/garglk/config.o",
+      "abi": "garglk",
+      "output": "D:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\release\\obj\\local\\x86\\objs\\garglk\\config.o"
+    },
+    "window-release-garglk": {
+      "artifactName": "window",
+      "buildCommand": "C:\\Users\\engue\\AppData\\Local\\Android\\Sdk\\ndk\\25.2.9519653\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\src\\main\\jni\\Android.mk APP_ABI\u003dx86 NDK_ALL_ABIS\u003dx86 NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-19 NDK_OUT\u003dD:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\release\\lib D:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/release/obj/local/x86/objs/garglk/window.o",
+      "abi": "garglk",
+      "output": "D:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\release\\obj\\local\\x86\\objs\\garglk\\window.o"
+    },
+    "frotz-release-x86": {
+      "artifactName": "frotz",
+      "buildCommand": "C:\\Users\\engue\\AppData\\Local\\Android\\Sdk\\ndk\\25.2.9519653\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\src\\main\\jni\\Android.mk APP_ABI\u003dx86 NDK_ALL_ABIS\u003dx86 NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-19 NDK_OUT\u003dD:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\release\\lib D:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/release/obj/local/x86/libfrotz.so",
+      "abi": "x86",
+      "output": "D:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\release\\obj\\local\\x86\\libfrotz.so"
+    },
+    "scott-release-x86": {
+      "artifactName": "scott",
+      "buildCommand": "C:\\Users\\engue\\AppData\\Local\\Android\\Sdk\\ndk\\25.2.9519653\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\src\\main\\jni\\Android.mk APP_ABI\u003dx86 NDK_ALL_ABIS\u003dx86 NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-19 NDK_OUT\u003dD:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\release\\lib D:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/release/obj/local/x86/libscott.so",
+      "abi": "x86",
+      "output": "D:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\release\\obj\\local\\x86\\libscott.so"
+    },
+    "imgnull-release-andglk": {
+      "artifactName": "imgnull",
+      "buildCommand": "C:\\Users\\engue\\AppData\\Local\\Android\\Sdk\\ndk\\25.2.9519653\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\src\\main\\jni\\Android.mk APP_ABI\u003dx86 NDK_ALL_ABIS\u003dx86 NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-19 NDK_OUT\u003dD:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\release\\lib D:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/release/obj/local/x86/objs/andglk/imgnull.o",
+      "abi": "andglk",
+      "output": "D:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\release\\obj\\local\\x86\\objs\\andglk\\imgnull.o"
+    },
+    "nitfol-release-x86": {
+      "artifactName": "nitfol",
+      "buildCommand": "C:\\Users\\engue\\AppData\\Local\\Android\\Sdk\\ndk\\25.2.9519653\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\src\\main\\jni\\Android.mk APP_ABI\u003dx86 NDK_ALL_ABIS\u003dx86 NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-19 NDK_OUT\u003dD:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\release\\lib D:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/release/obj/local/x86/libnitfol.so",
+      "abi": "x86",
+      "output": "D:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\release\\obj\\local\\x86\\libnitfol.so"
+    },
+    "winblank-release-garglk": {
+      "artifactName": "winblank",
+      "buildCommand": "C:\\Users\\engue\\AppData\\Local\\Android\\Sdk\\ndk\\25.2.9519653\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\src\\main\\jni\\Android.mk APP_ABI\u003dx86 NDK_ALL_ABIS\u003dx86 NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-19 NDK_OUT\u003dD:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\release\\lib D:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/release/obj/local/x86/objs/garglk/winblank.o",
+      "abi": "garglk",
+      "output": "D:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\release\\obj\\local\\x86\\objs\\garglk\\winblank.o"
+    },
+    "gi_dispa-release-andglk": {
+      "artifactName": "gi_dispa",
+      "buildCommand": "C:\\Users\\engue\\AppData\\Local\\Android\\Sdk\\ndk\\25.2.9519653\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\src\\main\\jni\\Android.mk APP_ABI\u003dx86 NDK_ALL_ABIS\u003dx86 NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-19 NDK_OUT\u003dD:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\release\\lib D:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/release/obj/local/x86/objs/andglk/gi_dispa.o",
+      "abi": "andglk",
+      "output": "D:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\release\\obj\\local\\x86\\objs\\andglk\\gi_dispa.o"
+    },
+    "cgmisc-release-andglk": {
+      "artifactName": "cgmisc",
+      "buildCommand": "C:\\Users\\engue\\AppData\\Local\\Android\\Sdk\\ndk\\25.2.9519653\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\src\\main\\jni\\Android.mk APP_ABI\u003dx86 NDK_ALL_ABIS\u003dx86 NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-19 NDK_OUT\u003dD:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\release\\lib D:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/release/obj/local/x86/objs/andglk/cgmisc.o",
+      "abi": "andglk",
+      "output": "D:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\release\\obj\\local\\x86\\objs\\andglk\\cgmisc.o"
+    },
+    "cgfref-release-andglk": {
+      "artifactName": "cgfref",
+      "buildCommand": "C:\\Users\\engue\\AppData\\Local\\Android\\Sdk\\ndk\\25.2.9519653\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\src\\main\\jni\\Android.mk APP_ABI\u003dx86 NDK_ALL_ABIS\u003dx86 NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-19 NDK_OUT\u003dD:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\release\\lib D:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/release/obj/local/x86/objs/andglk/cgfref.o",
+      "abi": "andglk",
+      "output": "D:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\release\\obj\\local\\x86\\objs\\andglk\\cgfref.o"
+    },
+    "andglk-release-andglk": {
+      "artifactName": "andglk",
+      "buildCommand": "C:\\Users\\engue\\AppData\\Local\\Android\\Sdk\\ndk\\25.2.9519653\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\src\\main\\jni\\Android.mk APP_ABI\u003dx86 NDK_ALL_ABIS\u003dx86 NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-19 NDK_OUT\u003dD:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\release\\lib D:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/release/obj/local/x86/objs/andglk/andglk.o",
+      "abi": "andglk",
+      "output": "D:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\release\\obj\\local\\x86\\objs\\andglk\\andglk.o"
+    },
+    "sndnull-release-garglk": {
+      "artifactName": "sndnull",
+      "buildCommand": "C:\\Users\\engue\\AppData\\Local\\Android\\Sdk\\ndk\\25.2.9519653\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\src\\main\\jni\\Android.mk APP_ABI\u003dx86 NDK_ALL_ABIS\u003dx86 NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-19 NDK_OUT\u003dD:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\release\\lib D:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/release/obj/local/x86/objs/garglk/sndnull.o",
+      "abi": "garglk",
+      "output": "D:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\release\\obj\\local\\x86\\objs\\garglk\\sndnull.o"
+    },
+    "cgdate-release-garglk": {
+      "artifactName": "cgdate",
+      "buildCommand": "C:\\Users\\engue\\AppData\\Local\\Android\\Sdk\\ndk\\25.2.9519653\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\src\\main\\jni\\Android.mk APP_ABI\u003dx86 NDK_ALL_ABIS\u003dx86 NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-19 NDK_OUT\u003dD:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\release\\lib D:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/release/obj/local/x86/objs/garglk/cgdate.o",
+      "abi": "garglk",
+      "output": "D:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\release\\obj\\local\\x86\\objs\\garglk\\cgdate.o"
+    },
+    "cgmisc-release-garglk": {
+      "artifactName": "cgmisc",
+      "buildCommand": "C:\\Users\\engue\\AppData\\Local\\Android\\Sdk\\ndk\\25.2.9519653\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\src\\main\\jni\\Android.mk APP_ABI\u003dx86 NDK_ALL_ABIS\u003dx86 NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-19 NDK_OUT\u003dD:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\release\\lib D:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/release/obj/local/x86/objs/garglk/cgmisc.o",
+      "abi": "garglk",
+      "output": "D:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\release\\obj\\local\\x86\\objs\\garglk\\cgmisc.o"
+    },
+    "gi_dispa-release-garglk": {
+      "artifactName": "gi_dispa",
+      "buildCommand": "C:\\Users\\engue\\AppData\\Local\\Android\\Sdk\\ndk\\25.2.9519653\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\src\\main\\jni\\Android.mk APP_ABI\u003dx86 NDK_ALL_ABIS\u003dx86 NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-19 NDK_OUT\u003dD:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\release\\lib D:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/release/obj/local/x86/objs/garglk/gi_dispa.o",
+      "abi": "garglk",
+      "output": "D:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\release\\obj\\local\\x86\\objs\\garglk\\gi_dispa.o"
+    },
+    "cgfref-release-garglk": {
+      "artifactName": "cgfref",
+      "buildCommand": "C:\\Users\\engue\\AppData\\Local\\Android\\Sdk\\ndk\\25.2.9519653\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\src\\main\\jni\\Android.mk APP_ABI\u003dx86 NDK_ALL_ABIS\u003dx86 NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-19 NDK_OUT\u003dD:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\release\\lib D:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/release/obj/local/x86/objs/garglk/cgfref.o",
+      "abi": "garglk",
+      "output": "D:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\release\\obj\\local\\x86\\objs\\garglk\\cgfref.o"
+    },
+    "sysand-release-garglk": {
+      "artifactName": "sysand",
+      "buildCommand": "C:\\Users\\engue\\AppData\\Local\\Android\\Sdk\\ndk\\25.2.9519653\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\src\\main\\jni\\Android.mk APP_ABI\u003dx86 NDK_ALL_ABIS\u003dx86 NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-19 NDK_OUT\u003dD:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\release\\lib D:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/release/obj/local/x86/objs/garglk/sysand.o",
+      "abi": "garglk",
+      "output": "D:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\release\\obj\\local\\x86\\objs\\garglk\\sysand.o"
+    },
+    "andglk-loader-release-x86": {
+      "artifactName": "andglk-loader",
+      "buildCommand": "C:\\Users\\engue\\AppData\\Local\\Android\\Sdk\\ndk\\25.2.9519653\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\src\\main\\jni\\Android.mk APP_ABI\u003dx86 NDK_ALL_ABIS\u003dx86 NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-19 NDK_OUT\u003dD:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\release\\lib D:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/release/obj/local/x86/libandglk-loader.so",
+      "abi": "x86",
+      "output": "D:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\release\\obj\\local\\x86\\libandglk-loader.so"
+    },
+    "cgblorb-release-andglk": {
+      "artifactName": "cgblorb",
+      "buildCommand": "C:\\Users\\engue\\AppData\\Local\\Android\\Sdk\\ndk\\25.2.9519653\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\src\\main\\jni\\Android.mk APP_ABI\u003dx86 NDK_ALL_ABIS\u003dx86 NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-19 NDK_OUT\u003dD:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\release\\lib D:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/release/obj/local/x86/objs/andglk/cgblorb.o",
+      "abi": "andglk",
+      "output": "D:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\release\\obj\\local\\x86\\objs\\andglk\\cgblorb.o"
+    },
+    "cgstream-release-andglk": {
+      "artifactName": "cgstream",
+      "buildCommand": "C:\\Users\\engue\\AppData\\Local\\Android\\Sdk\\ndk\\25.2.9519653\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\src\\main\\jni\\Android.mk APP_ABI\u003dx86 NDK_ALL_ABIS\u003dx86 NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-19 NDK_OUT\u003dD:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\release\\lib D:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/release/obj/local/x86/objs/andglk/cgstream.o",
+      "abi": "andglk",
+      "output": "D:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\release\\obj\\local\\x86\\objs\\andglk\\cgstream.o"
+    },
+    "cggestal-release-garglk": {
+      "artifactName": "cggestal",
+      "buildCommand": "C:\\Users\\engue\\AppData\\Local\\Android\\Sdk\\ndk\\25.2.9519653\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\src\\main\\jni\\Android.mk APP_ABI\u003dx86 NDK_ALL_ABIS\u003dx86 NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-19 NDK_OUT\u003dD:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\release\\lib D:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/release/obj/local/x86/objs/garglk/cggestal.o",
+      "abi": "garglk",
+      "output": "D:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\release\\obj\\local\\x86\\objs\\garglk\\cggestal.o"
+    },
+    "babel-release-x86": {
+      "artifactName": "babel",
+      "buildCommand": "C:\\Users\\engue\\AppData\\Local\\Android\\Sdk\\ndk\\25.2.9519653\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\src\\main\\jni\\Android.mk APP_ABI\u003dx86 NDK_ALL_ABIS\u003dx86 NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-19 NDK_OUT\u003dD:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003dD:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\release\\lib D:/Android/son_of_hunkypunk-master/app/build/intermediates/ndkBuild/release/obj/local/x86/libbabel.so",
+      "abi": "x86",
+      "output": "D:\\Android\\son_of_hunkypunk-master\\app\\build\\intermediates\\ndkBuild\\release\\obj\\local\\x86\\libbabel.so"
+    }
+  }
+}
