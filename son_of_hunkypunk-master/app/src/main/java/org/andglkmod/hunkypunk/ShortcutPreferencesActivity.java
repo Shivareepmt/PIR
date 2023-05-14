@@ -21,6 +21,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -84,13 +85,13 @@ public class ShortcutPreferencesActivity extends AppCompatActivity {
 
                     Snackbar snackbar = Snackbar.make(listView, item.getTitle() + " removed!", Snackbar.LENGTH_LONG);
                     snackbar.setAction("UNDO", new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            adapter.insert(item, which);
-                            addShortcutToSharedPreferences(title, command);
-                            moveShortcutPreference(adapter.getCount() - 1, which);
-                        }
-                    })
+                                @Override
+                                public void onClick(View view) {
+                                    adapter.insert(item, which);
+                                    addShortcutToSharedPreferences(title, command);
+                                    moveShortcutPreference(adapter.getCount() - 1, which);
+                                }
+                            })
                             .show();
 
 

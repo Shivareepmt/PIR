@@ -410,27 +410,27 @@ public class TextBufferWindow extends Window {
             //    imm.showSoftInput(this, InputMethodManager.SHOW_IMPLICIT);
             //}
             //else {
-                (new Handler()).postDelayed(
-                        new Runnable() {
-                            public void run() {
-                                _CommandView.this.dispatchTouchEvent(
-                                        MotionEvent.obtain(
-                                                SystemClock.uptimeMillis(),
-                                                SystemClock.uptimeMillis(),
-                                                MotionEvent.ACTION_DOWN,
-                                                0, 0, 0
-                                        )
-                                );
-                                _CommandView.this.dispatchTouchEvent(
-                                        MotionEvent.obtain(
-                                                SystemClock.uptimeMillis(),
-                                                SystemClock.uptimeMillis(),
-                                                MotionEvent.ACTION_UP,
-                                                0, 0, 0
-                                        )
-                                );
-                            }
-                        }, 100);
+            (new Handler()).postDelayed(
+                    new Runnable() {
+                        public void run() {
+                            _CommandView.this.dispatchTouchEvent(
+                                    MotionEvent.obtain(
+                                            SystemClock.uptimeMillis(),
+                                            SystemClock.uptimeMillis(),
+                                            MotionEvent.ACTION_DOWN,
+                                            0, 0, 0
+                                    )
+                            );
+                            _CommandView.this.dispatchTouchEvent(
+                                    MotionEvent.obtain(
+                                            SystemClock.uptimeMillis(),
+                                            SystemClock.uptimeMillis(),
+                                            MotionEvent.ACTION_UP,
+                                            0, 0, 0
+                                    )
+                            );
+                        }
+                    }, 100);
             //}
         }
 
@@ -460,7 +460,7 @@ public class TextBufferWindow extends Window {
             setTypeface(TextBufferWindow.this.getDefaultTypeface());
             setBackgroundColor(TextBufferWindow.DefaultBackground);
 
-			/*DO NOT DELETE*/
+            /*DO NOT DELETE*/
             /* Not used for now but left for onPreDrawNight */
             /*getViewTreeObserver().addOnPreDrawListener(new ViewTreeObserver.OnPreDrawListener() {
                 @Override
@@ -524,12 +524,12 @@ public class TextBufferWindow extends Window {
             }
 
             /* Here is handled the copying of text. On ACTION_DOWN the coordinates and down-time
-            *  are being measured. Then on ACTION_UP the copy is triggered. Down-time needs to be
-            *  greater than 100ms. getOffset()-method transforms x,y-coordinates to a String
-            *  selection position, or just offset from head. stringHelper(offset) makes a whole
-            *  word-selection from the stand alone selection-click. From then on follows the
-            *  filling of the placeholders with the copied text or appending to input word/s.
-            *  More cases are handled below. ACTION_MOVE disables the copying on UP. */
+             *  are being measured. Then on ACTION_UP the copy is triggered. Down-time needs to be
+             *  greater than 100ms. getOffset()-method transforms x,y-coordinates to a String
+             *  selection position, or just offset from head. stringHelper(offset) makes a whole
+             *  word-selection from the stand alone selection-click. From then on follows the
+             *  filling of the placeholders with the copied text or appending to input word/s.
+             *  More cases are handled below. ACTION_MOVE disables the copying on UP. */
             @Override
             public boolean onTouchEvent(final TextView widget, Spannable text, MotionEvent event) {
                 SharedPreferences sharedShortcutPrefs = mContext.getSharedPreferences("shortcutPrefs", Context.MODE_PRIVATE);
@@ -587,7 +587,7 @@ public class TextBufferWindow extends Window {
                                         }
 
                                         TextBufferWindow.this.mScrollView.fullScroll(View.FOCUS_DOWN);
-                                        TextBufferWindow.this.mActiveCommand.showKeyboard();
+                                        //TextBufferWindow.this.mActiveCommand.showKeyboard();
 
                                         if (userInput.contains("<%>")) {
                                             Toast.makeText(mGlk.getContext(), "Long-press on the next object", Toast.LENGTH_SHORT).show();
@@ -1076,29 +1076,32 @@ public class TextBufferWindow extends Window {
             spannable.setSpan(sp, 0, spannable.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         }
         lineInputAccepted(spannable);
+        CharInputEvent ev = new CharInputEvent(TextBufferWindow.this, KeyEvent.KEYCODE_ENDCALL);
+        mGlk.postEvent(ev);
     }
 
-    public void toggleSpeechRecognition() { //added for PIR
+    public void toggleSpeechRecognition() {
         if (isSpeechRecognitionActive) {
             // Stop speech recognition
-            speechRecognitionManager.stopContinuousRecognition();
+            speechRecognitionManager.stopContinuousRecognitionWithResult().thenAccept(recognizedText -> {
+
+
+                // Set the recognized text as the user input
+                mActiveCommand.setText(recognizedText);
+                processSpeechInput(recognizedText);
+
+                // Notify the speech recognition listener of the result
+                if (speechRecognitionListener != null) {
+                    speechRecognitionListener.onSpeechRecognitionResult(recognizedText);
+                }
+            });
             isSpeechRecognitionActive = false;
         } else {
             // Start speech recognition
             speechRecognitionManager.startContinuousRecognition(new SpeechRecognitionManager.SpeechRecognitionCallback() {
                 @Override
                 public void onRecognitionResult(String recognizedText) {
-                    // Update the text input area with the recognized text
-                    // appendTextToInput(recognizedText);
-
-                    // Set the recognized text as the user input
-                    mActiveCommand.setText(recognizedText);
-                    processSpeechInput(recognizedText);
-
-                    // Notify the speech recognition listener of the result
-                    if (speechRecognitionListener != null) {
-                        speechRecognitionListener.onSpeechRecognitionResult(recognizedText);
-                    }
+                    // Do nothing here, as the text will be processed after stopping the speech recognition
                 }
 
                 @Override
@@ -1112,6 +1115,7 @@ public class TextBufferWindow extends Window {
             isSpeechRecognitionActive = true;
         }
     }
+
 
     public void setSpeechRecognitionListener(SpeechRecognitionListener listener) {
         speechRecognitionListener = listener;
@@ -1219,7 +1223,7 @@ public class TextBufferWindow extends Window {
                                 View shortcutView = LayoutInflater.from(mContext).inflate(R.layout.shortcut_view, null);
                                 CardView cardView = (CardView) shortcutView.findViewById(R.id.cardview);
                                 final TextView textView = (TextView) shortcutView.findViewById(R.id.shortcuttitle);
-                                final ImageButton buttonSpeech = shortcutView.findViewById(R.id.toggle_speachrecognition) ;
+                                final ImageButton buttonSpeech = shortcutView.findViewById(R.id.toggle_speech_recognition) ;
                                 buttonSpeech.setOnClickListener(new View.OnClickListener() {
                                     @Override
                                     public void onClick(View view) {
@@ -1263,8 +1267,8 @@ public class TextBufferWindow extends Window {
                         mStream = new _Stream();
 
 
-					/*DO NOT DELETE*/
-                    /*Not used for now but left for compatibility as part of issue - onPreDrawNight*/
+                        /*DO NOT DELETE*/
+                        /*Not used for now but left for compatibility as part of issue - onPreDrawNight*/
                     /*mGlk.getView().getViewTreeObserver().addOnPreDrawListener(new ViewTreeObserver.OnPreDrawListener() {
                         @Override
 						public boolean onPreDraw () {
@@ -1637,7 +1641,7 @@ public class TextBufferWindow extends Window {
             echo.putChar('\n');
         }
 
-        //Log.d("Glk/TextBufferWindow", "lineInputAccepted:"+result);
+        Log.d("Glk/TextBufferWindow", "lineInputAccepted:"+result);
 
         LineInputEvent lie = new LineInputEvent(this, result, mLineEventBuffer,
                 mLineEventBufferLength, mLineEventBufferRock, mUnicodeEvent);

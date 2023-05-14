@@ -10,6 +10,8 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:minHeight="45dp"
+        android:text="TEXT"
+        android:textSize="0sp"
         android:minWidth="50dp"
         card_view:cardBackgroundColor="@color/shortcutsColor"
         card_view:cardCornerRadius="7dp">
@@ -21,9 +23,11 @@
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"/>
         <ImageButton
-            android:id="@+id/toggle_speachrecognition"
+            android:id="@+id/toggle_speech_recognition"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="TEXT"
+            android:textSize="0sp"
             android:src="@drawable/microphone_icon"
             android:background="@null"
             android:scaleType="centerCrop" />
