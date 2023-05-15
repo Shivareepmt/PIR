@@ -296,11 +296,6 @@ public class PairWindow extends Window {
 		return false;
 	}
 
-	@Override
-	protected void onDestroy() {
-
-	}
-
 	public Window getLeftChild() {
 		return mChildren[0];
 	}

@@ -657,11 +657,6 @@ public class TextGridWindow extends Window {
     }
 
     @Override
-    protected void onDestroy() {
-
-    }
-
-    @Override
     public void flush() {
         if (mView == null) return;
 

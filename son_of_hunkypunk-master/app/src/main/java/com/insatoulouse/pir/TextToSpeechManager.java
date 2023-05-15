@@ -68,9 +68,7 @@ public class TextToSpeechManager {
         });
     }
 
-public void pause() {
-        speechSynthesizer.StopSpeakingAsync();
-    }
+
 
 
     public void shutdown() {

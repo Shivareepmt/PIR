@@ -2,7 +2,6 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:id="@+id/shortcutlayout"
-    android:soundEffectsEnabled="true"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -11,10 +10,10 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:minHeight="45dp"
-        android:layout_centerVertical="true"
         android:text="TEXT"
         android:textSize="0sp"
         android:minWidth="50dp"
+        card_view:cardBackgroundColor="@color/shortcutsColor"
         card_view:cardCornerRadius="7dp">
         <TextView
             android:id="@+id/shortcuttitle"
@@ -29,9 +28,8 @@
             android:layout_height="wrap_content"
             android:text="TEXT"
             android:textSize="0sp"
-            android:layout_gravity="center"
-            android:background="@drawable/button_background"
             android:src="@drawable/microphone_icon"
+            android:background="@null"
             android:scaleType="centerCrop" />
     </androidx.cardview.widget.CardView>
 </RelativeLayout>

@@ -82,11 +82,6 @@ public class BlankWindow extends Window {
 	}
 
 	@Override
-	protected void onDestroy() {
-
-	}
-
-	@Override
 	public void flush() {
 	}
 }

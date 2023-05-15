@@ -442,9 +442,7 @@ public abstract class Window extends CPointed {
 			w.getView().setEnabled(false);
 	}
 
-    protected abstract void onDestroy();
-
-    abstract public void flush();
+	abstract public void flush();
 
 	public Parcelable saveInstanceState() {
 		return null;

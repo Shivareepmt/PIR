@@ -36,7 +36,6 @@ import org.andglkmod.hunkypunk.HunkyPunk.Games;
 import org.andglkmod.ifdb.IFDb;
 
 import android.Manifest;
-import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.app.ListActivity;
 import android.app.ProgressDialog;
@@ -183,9 +182,7 @@ public class GamesList extends ListActivity implements OnClickListener, AppCompa
         }
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},1);
-            //downloadPreselected();
         }
-
 
         requestWindowFeature(Window.FEATURE_INDETERMINATE_PROGRESS);
         setDefaultKeyMode(DEFAULT_KEYS_SEARCH_LOCAL);
@@ -196,8 +193,8 @@ public class GamesList extends ListActivity implements OnClickListener, AppCompa
 
         /** This part creates the list of Ifs */
         Cursor cursor = managedQuery(Games.CONTENT_URI, PROJECTION, Games.PATH + " IS NOT NULL", null, null);
-        adapter = new SimpleCursorAdapter(this,R.layout.list_item_sponch, cursor,
-                new String[]{Games.TITLE, Games.AUTHOR}, new int[]{R.id.text1, R.id.text2});
+        adapter = new SimpleCursorAdapter(this, android.R.layout.simple_list_item_2, cursor,
+                new String[]{Games.TITLE, Games.AUTHOR}, new int[]{android.R.id.text1, android.R.id.text2});
         setListAdapter(adapter);
 
         AppCompatDelegate delegate = AppCompatDelegate.create(this, this);
@@ -220,7 +217,7 @@ public class GamesList extends ListActivity implements OnClickListener, AppCompa
             SharedPreferences.Editor shortcutEditor = sharedShortcuts.edit();
             SharedPreferences.Editor shortcutIDEditor = sharedShortcutIDs.edit();
 
-            String[] defaults = new String[]{""};
+            String[] defaults = new String[]{"look", "examine", "take", "inventory", "ask", "drop", "tell", "again", "open", "close", "give", "show"};
             ArrayList<String> list = new ArrayList<String>();
             for (int i = 0; i < defaults.length; i++)
                 list.add(defaults[i]);
@@ -328,7 +325,6 @@ public class GamesList extends ListActivity implements OnClickListener, AppCompa
         }
     }
 
-    @SuppressLint("ResourceType")
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         super.onCreateOptionsMenu(menu);
@@ -408,7 +404,6 @@ public class GamesList extends ListActivity implements OnClickListener, AppCompa
     }
 
     private void downloadPreselected() {
-
         downloadCancelled = false;
 
         progressDialog = new ProgressDialog(this);
