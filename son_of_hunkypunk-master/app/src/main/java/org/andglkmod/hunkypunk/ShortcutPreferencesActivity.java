@@ -333,7 +333,7 @@ public class ShortcutPreferencesActivity extends AppCompatActivity {
         shortcutEditor.clear();
         shortcutIDEditor.clear();
 
-        String[] defaults = new String[]{"look", "examine", "take", "inventory", "ask", "drop", "tell", "again", "open", "close", "give", "show"};
+        String[] defaults = new String[]{""};
         ArrayList<String> list = new ArrayList<String>();
         for (int i = 0; i < defaults.length; i++)
             list.add(defaults[i]);

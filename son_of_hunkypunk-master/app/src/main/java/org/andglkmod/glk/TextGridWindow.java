@@ -477,7 +477,7 @@ public class TextGridWindow extends Window {
             postInvalidate();
         }
 
-        private void doneLineInput() {
+        public void doneLineInput() {
             final Event e = cancelLineEvent();
             if (null != e)
                 mGlk.postEvent(e);

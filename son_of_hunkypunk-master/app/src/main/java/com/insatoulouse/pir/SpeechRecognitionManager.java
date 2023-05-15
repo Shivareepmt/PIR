@@ -7,6 +7,7 @@ import android.util.Log;
 import com.microsoft.cognitiveservices.speech.*;
 import com.microsoft.cognitiveservices.speech.audio.AudioConfig;
 
+import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -58,8 +59,18 @@ public class SpeechRecognitionManager {
         speechRecognizer.stopContinuousRecognitionAsync();
     }
 
+    public CompletableFuture<String> stopContinuousRecognitionWithResult() {
+        CompletableFuture<String> recognizedTextFuture = new CompletableFuture<>();
+        speechRecognizer.recognized.addEventListener((o, speechRecognitionResultEventArgs) -> {
+            String recognizedText = speechRecognitionResultEventArgs.getResult().getText();
+            recognizedTextFuture.complete(recognizedText);
+        });
+        speechRecognizer.stopContinuousRecognitionAsync();
+        return recognizedTextFuture;
+    }
+
+
     public void shutdown() {
         speechRecognizer.close();
     }
 }
-
