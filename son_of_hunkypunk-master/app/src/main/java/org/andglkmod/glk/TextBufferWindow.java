@@ -28,7 +28,6 @@ import java.util.regex.Pattern;
 import org.andglkmod.glk.Styles.StyleSpan;
 import org.andglkmod.hunkypunk.R;
 
-import android.Manifest;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -36,6 +35,8 @@ import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Typeface;
+import android.media.MediaPlayer;
+import android.os.Build;
 import android.os.Handler;
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -44,8 +45,6 @@ import android.os.SystemClock;
 import androidx.appcompat.widget.AppCompatEditText;
 import androidx.appcompat.widget.AppCompatTextView;
 import androidx.cardview.widget.CardView;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
 
 import android.text.Editable;
 import android.text.Layout;
@@ -84,6 +83,9 @@ public class TextBufferWindow extends Window {
     private SpeechRecognitionManager speechRecognitionManager = new SpeechRecognitionManager(Glk.getInstance().getContext());
     private SpeechRecognitionListener speechRecognitionListener;
     public boolean isSpeechRecognitionActive = false;
+
+    private MediaPlayer beep;
+    private MediaPlayer boop;
 
 
     public static class _SavedState implements Parcelable {
@@ -234,6 +236,8 @@ public class TextBufferWindow extends Window {
     }
 
     protected Glk mGlk;
+    private int PressCount = 0;
+
     protected _View mView;
     protected Handler mHandler;
     protected Context mContext;
@@ -396,7 +400,7 @@ public class TextBufferWindow extends Window {
             setFocusableInTouchMode(true);
             if (requestFocus())
             {
-                showKeyboard();
+               // showKeyboard();
             }
         }
 
@@ -1075,35 +1079,85 @@ public class TextBufferWindow extends Window {
         if (spannable.length() > 0) {
             spannable.setSpan(sp, 0, spannable.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         }
-        lineInputAccepted(spannable);
+        //lineInputAccepted(spannable);
         CharInputEvent ev = new CharInputEvent(TextBufferWindow.this, KeyEvent.KEYCODE_ENDCALL);
-        mGlk.postEvent(ev);
+        /////mGlk.postEvent(ev);
     }
+public String SRboop(){
 
-    public void toggleSpeechRecognition() {
-        if (isSpeechRecognitionActive) {
-            // Stop speech recognition
+    final String[] result = {""};
+    View shortcutView = LayoutInflater.from(mContext).inflate(R.layout.shortcut_view, null);
+        // Stop speech recognition
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
             speechRecognitionManager.stopContinuousRecognitionWithResult().thenAccept(recognizedText -> {
-
-
                 // Set the recognized text as the user input
-                mActiveCommand.setText(recognizedText);
-                processSpeechInput(recognizedText);
+                //processSpeechInput(recognizedText);
+                //mActiveCommand.append(recognizedText);
 
                 // Notify the speech recognition listener of the result
                 if (speechRecognitionListener != null) {
                     speechRecognitionListener.onSpeechRecognitionResult(recognizedText);
                 }
             });
+        }
+        isSpeechRecognitionActive = false;
+
+    return result[0];
+}
+
+public String SRbeep(){
+    final String[] result = {""};
+    speechRecognitionManager.startContinuousRecognition(new SpeechRecognitionManager.SpeechRecognitionCallback() {
+        @Override
+        public void onRecognitionResult(String recognizedText) {
+            processSpeechInput(recognizedText);
+            result[0] = recognizedText;
+            //mActiveCommand.append(recognizedText);
+
+
+            // Do nothing here, as the text will be processed after stopping the speech recognition
+        }
+        @Override
+        public void onRecognitionCanceled() {
+            // Notify the speech recognition listener of the error
+            if (speechRecognitionListener != null) {
+                speechRecognitionListener.onSpeechRecognitionError();
+            }
+        }
+    });
+    isSpeechRecognitionActive = true;
+        return result[0];
+}
+    public String toggleSpeechRecognition() {
+        final String[] result = {""};
+        View shortcutView = LayoutInflater.from(mContext).inflate(R.layout.shortcut_view, null);
+        if (isSpeechRecognitionActive) {
+            // Stop speech recognition
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                speechRecognitionManager.stopContinuousRecognitionWithResult().thenAccept(recognizedText -> {
+                    // Set the recognized text as the user input
+                    //processSpeechInput(recognizedText);
+                    //mActiveCommand.append(recognizedText);
+
+                    // Notify the speech recognition listener of the result
+                    if (speechRecognitionListener != null) {
+                        speechRecognitionListener.onSpeechRecognitionResult(recognizedText);
+                    }
+                });
+            }
             isSpeechRecognitionActive = false;
         } else {
             // Start speech recognition
             speechRecognitionManager.startContinuousRecognition(new SpeechRecognitionManager.SpeechRecognitionCallback() {
                 @Override
                 public void onRecognitionResult(String recognizedText) {
+                    processSpeechInput(recognizedText);
+                    result[0] = recognizedText;
+                    //mActiveCommand.append(recognizedText);
+
+
                     // Do nothing here, as the text will be processed after stopping the speech recognition
                 }
-
                 @Override
                 public void onRecognitionCanceled() {
                     // Notify the speech recognition listener of the error
@@ -1114,6 +1168,7 @@ public class TextBufferWindow extends Window {
             });
             isSpeechRecognitionActive = true;
         }
+        return result[0];
     }
 
 
@@ -1126,6 +1181,7 @@ public class TextBufferWindow extends Window {
     /*If you don't know what to use the rocks for, provide 0 and forget about it.*/
     public TextBufferWindow(Glk glk, int rock) {
         super(rock);
+
 
         mGlk = glk;
         mContext = glk.getContext();
@@ -1214,22 +1270,40 @@ public class TextBufferWindow extends Window {
                         String shortcutsColor = mContext.getSharedPreferences("Color", Context.MODE_PRIVATE)
                                 .getString("newColor", "#52A6B8");
                         int bg = Color.parseColor(shortcutsColor);
-
                         if (sharedShortcutPrefs.getBoolean("enablelist", true))
                             for (int i = 0; i < 1; i++) {
                                 String title = sharedShortcutIDs.getString(i + "", "");
                                 final String command = sharedShortcuts.getString(title, "");
+                                beep = MediaPlayer.create(mContext, R.raw.beep);
+                                boop = MediaPlayer.create(mContext, R.raw.boop);
+
 
                                 View shortcutView = LayoutInflater.from(mContext).inflate(R.layout.shortcut_view, null);
                                 CardView cardView = (CardView) shortcutView.findViewById(R.id.cardview);
                                 final TextView textView = (TextView) shortcutView.findViewById(R.id.shortcuttitle);
                                 final ImageButton buttonSpeech = shortcutView.findViewById(R.id.toggle_speech_recognition) ;
                                 buttonSpeech.setOnClickListener(new View.OnClickListener() {
+                                    @SuppressLint("SuspiciousIndentation")
                                     @Override
                                     public void onClick(View view) {
+                                        TTS.pause();
+                                        PressCount++ ;
+                                        String STT = toggleSpeechRecognition() ;
+                                        if(PressCount%2 == 0){
+                                            boop.start();
+                                            buttonSpeech.setBackgroundResource(R.drawable.button_normal);
+                                            mActiveCommand.setText(STT);
+                                            if (STT.length() > 0)
+                                                lineInputAccepted( new SpannableString(STT));
+                                           // mActiveCommand.append("\n");
 
+                                        }
+                                        else{
+                                            beep.start();
+                                            //shortcutView.playSoundEffect(SoundEffectConstants.CLICK);
+                                            //mActiveCommand.setText("");
+                                            buttonSpeech.setBackgroundResource(R.drawable.button_pressed);}
                                         System.out.println("On ARRIVE LA") ;
-                                        toggleSpeechRecognition();
                                         System.out.println("On ARRIVE APRES") ;
                                     }
                                 });
@@ -1325,7 +1399,7 @@ public class TextBufferWindow extends Window {
                 if (userCommand.equalsIgnoreCase("Inventory") || userCommand.equalsIgnoreCase("I")) {
 
                     mActiveCommand.setText("");
-                    mActiveCommand.append(userCommand);
+                    mActiveCommand.setText(userCommand);
                     mActiveCommand.dispatchKeyEvent(new KeyEvent(KeyEvent.ACTION_DOWN, KeyEvent.KEYCODE_ENTER));
 
                     output(userInput);
@@ -1675,6 +1749,17 @@ public class TextBufferWindow extends Window {
                 mView.clear();
             }
         });
+    }
+    @Override
+    protected void onDestroy() {
+        if (beep != null) {
+            beep.release();
+            beep = null;
+        }
+        if (boop != null) {
+            boop.release();
+            boop = null;
+        }
     }
 
     @Override
