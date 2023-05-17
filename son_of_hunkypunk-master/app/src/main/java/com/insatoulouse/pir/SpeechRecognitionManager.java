@@ -27,6 +27,7 @@ public class SpeechRecognitionManager {
         Log.d("SRManager", "service_region: " + serviceRegion);
 
         SpeechConfig speechConfig = SpeechConfig.fromSubscription(subscriptionKey, serviceRegion);
+        //speechConfig.setSpeechSynthesisLanguage("fr-FR");
         AudioConfig audioConfig = AudioConfig.fromDefaultMicrophoneInput();
         speechRecognizer = new SpeechRecognizer(speechConfig, audioConfig);
     }
@@ -39,7 +40,7 @@ public class SpeechRecognitionManager {
     public void startContinuousRecognition(SpeechRecognitionCallback callback) {
         speechRecognizer.recognizing.addEventListener((o, speechRecognitionResultEventArgs) -> {
             String recognizedText = speechRecognitionResultEventArgs.getResult().getText();
-            Log.d("SRManager", "Recognized text: " + recognizedText);
+            Log.d("SRManager", "Recognizing text: " + recognizedText);
             if (callback != null) {
                 callback.onRecognitionResult(recognizedText);
             }
@@ -55,14 +56,12 @@ public class SpeechRecognitionManager {
         speechRecognizer.startContinuousRecognitionAsync();
     }
 
-    public void stopContinuousRecognition() {
-        speechRecognizer.stopContinuousRecognitionAsync();
-    }
-
     public CompletableFuture<String> stopContinuousRecognitionWithResult() {
         CompletableFuture<String> recognizedTextFuture = new CompletableFuture<>();
         speechRecognizer.recognized.addEventListener((o, speechRecognitionResultEventArgs) -> {
+
             String recognizedText = speechRecognitionResultEventArgs.getResult().getText();
+            Log.d("SRManager", "Recognized text: " + recognizedText);
             recognizedTextFuture.complete(recognizedText);
         });
         speechRecognizer.stopContinuousRecognitionAsync();

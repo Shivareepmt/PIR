@@ -222,7 +222,7 @@ public abstract class Window extends CPointed {
 			wnd = new TextBufferWindow(glk, rock);
 			break;
 		case Window.WINTYPE_TEXTGRID:
-			wnd = new TextGridWindow(glk, rock);
+			wnd = new TextGridWindow(glk, rock);;
 			break;
 		case Window.WINTYPE_BLANK:
 			wnd = new BlankWindow(glk, rock);

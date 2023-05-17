@@ -34,6 +34,7 @@ public class TextToSpeechManager {
 
 
         SpeechConfig speechConfig = SpeechConfig.fromSubscription(subscriptionKey, serviceRegion);
+        //speechConfig.setSpeechSynthesisLanguage("fr-FR");
         AudioConfig audioConfig = AudioConfig.fromDefaultSpeakerOutput();
         speechSynthesizer = new SpeechSynthesizer(speechConfig, audioConfig);
 
@@ -66,6 +67,10 @@ public class TextToSpeechManager {
                 e.printStackTrace();
             }
         });
+    }
+
+    public void pause(){
+        speechSynthesizer.StopSpeakingAsync();
     }
 
 

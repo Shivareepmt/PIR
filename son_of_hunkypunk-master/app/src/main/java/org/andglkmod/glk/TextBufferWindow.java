@@ -83,8 +83,11 @@ public class TextBufferWindow extends Window {
     TextToSpeechManager TTS = new TextToSpeechManager(Glk.getInstance().getContext());
     private SpeechRecognitionManager speechRecognitionManager = new SpeechRecognitionManager(Glk.getInstance().getContext());
     private SpeechRecognitionListener speechRecognitionListener;
-    public boolean isSpeechRecognitionActive = false;
+    private int keyEv=0;
+    public static int sema = 0 ;
 
+
+    public boolean isSpeechRecognitionActive = false;
 
     public static class _SavedState implements Parcelable {
         public static final Parcelable.Creator<_SavedState> CREATOR = new Parcelable.Creator<_SavedState>() {
@@ -1069,15 +1072,18 @@ public class TextBufferWindow extends Window {
         void onSpeechRecognitionError();
     }
 
-    private void processSpeechInput(String text) { //added for PIR
-        SpannableString spannable = new SpannableString(text);
+    private void processSpeechInput(String text) {
         Object sp = stylehints.getSpan(mContext, Glk.STYLE_INPUT, false);
-        if (spannable.length() > 0) {
-            spannable.setSpan(sp, 0, spannable.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-        }
-        lineInputAccepted(spannable);
-        CharInputEvent ev = new CharInputEvent(TextBufferWindow.this, KeyEvent.KEYCODE_ENDCALL);
-        mGlk.postEvent(ev);
+        SpannableStringBuilder sb = new SpannableStringBuilder();
+        sb.append(text.toString().replace("\n", "") + "\n");
+
+        if (sb.length() > 0)
+            sb.setSpan(sp, 0, sb.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        lineInputAccepted(sb);
+        output(sb);
+
+
+
     }
 
     public void toggleSpeechRecognition() {
@@ -1087,8 +1093,14 @@ public class TextBufferWindow extends Window {
 
 
                 // Set the recognized text as the user input
-                mActiveCommand.setText(recognizedText);
+                mActiveCommand.setText("");
+                mActiveCommand.append(recognizedText);
+
                 processSpeechInput(recognizedText);
+                ToggleCommandView();
+
+
+
 
                 // Notify the speech recognition listener of the result
                 if (speechRecognitionListener != null) {
@@ -1224,13 +1236,25 @@ public class TextBufferWindow extends Window {
                                 CardView cardView = (CardView) shortcutView.findViewById(R.id.cardview);
                                 final TextView textView = (TextView) shortcutView.findViewById(R.id.shortcuttitle);
                                 final ImageButton buttonSpeech = shortcutView.findViewById(R.id.toggle_speech_recognition) ;
+
                                 buttonSpeech.setOnClickListener(new View.OnClickListener() {
                                     @Override
                                     public void onClick(View view) {
-
-                                        System.out.println("On ARRIVE LA") ;
+                                        TTS.pause();
                                         toggleSpeechRecognition();
-                                        System.out.println("On ARRIVE APRES") ;
+                                        if(keyEv==0) {
+                                            keyEv++;
+                                        }
+                                        else {
+                                            keyEv--;
+                                            try {
+                                                Thread.sleep(500);
+                                            } catch (InterruptedException e) {
+                                                e.printStackTrace();
+                                            }
+                                            mActiveCommand.dispatchKeyEvent(new KeyEvent(KeyEvent.ACTION_DOWN, KeyEvent.KEYCODE_ENTER));
+
+                                        }
                                     }
                                 });
                                 textView.setText(title);
@@ -1632,6 +1656,10 @@ public class TextBufferWindow extends Window {
     public void lineInputAccepted(Spannable s) {
         String result = s.toString().trim();
 
+        Log.d("Glk/lineInputAccepted", "Before operation: mLineEventBuffer=" + mLineEventBuffer
+                + ", mLineEventBufferLength=" + mLineEventBufferLength
+                + ", mLineEventBufferRock=" + mLineEventBufferRock);
+
         mCommandText = s;
         mPrompt.setText("");
 
@@ -1648,6 +1676,11 @@ public class TextBufferWindow extends Window {
         mLineEventBufferLength =  mLineEventBufferRock = 0;
         mLineEventBuffer = 0;
         mGlk.postEvent(lie);
+
+        // Log the state of the variables after the operation
+        Log.d("Glk/lineInputAccepted", "After operation: mLineEventBuffer=" + mLineEventBuffer
+                + ", mLineEventBufferLength=" + mLineEventBufferLength
+                + ", mLineEventBufferRock=" + mLineEventBufferRock);
     }
 
     @Override

@@ -410,6 +410,8 @@ public class TextGridWindow extends Window {
             do {
                 if (mLineEventPending && event.getKeyCode() == KeyEvent.KEYCODE_ENTER) {
                     doneLineInput();
+                    Log.d("TextGridWindow", "on a validé");
+
                     return true;
                 }
                 if (mLineEventPending && event.getKeyCode() == KeyEvent.KEYCODE_DEL) {
@@ -418,6 +420,7 @@ public class TextGridWindow extends Window {
                 }
                 if (mCharEventPending) {
                     Event ev = CharInputEvent.fromKeyEvent(TextGridWindow.this, event);
+                    Log.d("TextGridWindow", "on a validé");
                     if (ev != null) {
                         mGlk.postEvent(ev);
                         cancelCharEvent();
@@ -479,6 +482,7 @@ public class TextGridWindow extends Window {
 
         private void doneLineInput() {
             final Event e = cancelLineEvent();
+            Log.d("TextGridWindow", "on a validé");
             if (null != e)
                 mGlk.postEvent(e);
         }
@@ -507,6 +511,9 @@ public class TextGridWindow extends Window {
             mLineEventPending = false;
             setEnabled(false);
             setFocusable(false);
+
+            Log.d("TextGridWindow", "cancelLineEvent");
+
 
             return new LineInputEvent(TextGridWindow.this, result, mLineBuffer, mMaxLen, mDispatchRock, mUnicodeEvent);
         }

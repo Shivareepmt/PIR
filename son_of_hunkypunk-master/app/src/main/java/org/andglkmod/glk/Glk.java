@@ -218,8 +218,12 @@ public class Glk extends Thread {
 	}
 
 	public void postEvent(Event e) {
+		Log.d("Glk/postEvent", "Event posted with result: " + e);
+
 		_needToSave = _needToSave || (e instanceof CharInputEvent || e instanceof LineInputEvent);
 		_eventQueue.add(e);
+		Log.d("Glk/postEvent", "Event Queue: " + _eventQueue);
+
 	}
 
 	public void postExitEvent() {
