@@ -26,16 +26,19 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.andglkmod.glk.Styles.StyleSpan;
+import org.andglkmod.hunkypunk.GamesList;
 import org.andglkmod.hunkypunk.R;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Typeface;
+import android.media.MediaPlayer;
 import android.os.Handler;
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -80,6 +83,8 @@ import com.insatoulouse.pir.TextToSpeechManager;
 
 
 public class TextBufferWindow extends Window {
+    private MediaPlayer beep;
+    private MediaPlayer boop;
     TextToSpeechManager TTS = new TextToSpeechManager(Glk.getInstance().getContext());
     private SpeechRecognitionManager speechRecognitionManager = new SpeechRecognitionManager(Glk.getInstance().getContext());
     private SpeechRecognitionListener speechRecognitionListener;
@@ -400,6 +405,7 @@ public class TextBufferWindow extends Window {
             if (requestFocus())
             {
                 showKeyboard();
+
             }
         }
 
@@ -1094,6 +1100,12 @@ public class TextBufferWindow extends Window {
 
                 // Set the recognized text as the user input
                 mActiveCommand.setText("");
+                if (recognizedText.contains("list")){
+                    System.out.println("Games List");
+                    Intent intent = new Intent(mContext, GamesList.class);
+                    mContext.startActivity(intent);
+                    toggleSpeechRecognition();
+                }
                 mActiveCommand.append(recognizedText);
 
                 processSpeechInput(recognizedText);
@@ -1231,6 +1243,9 @@ public class TextBufferWindow extends Window {
                             for (int i = 0; i < 1; i++) {
                                 String title = sharedShortcutIDs.getString(i + "", "");
                                 final String command = sharedShortcuts.getString(title, "");
+                                beep = MediaPlayer.create(mContext, R.raw.beep);
+                                boop = MediaPlayer.create(mContext, R.raw.boop);
+
 
                                 View shortcutView = LayoutInflater.from(mContext).inflate(R.layout.shortcut_view, null);
                                 CardView cardView = (CardView) shortcutView.findViewById(R.id.cardview);
@@ -1243,17 +1258,20 @@ public class TextBufferWindow extends Window {
                                         TTS.pause();
                                         toggleSpeechRecognition();
                                         if(keyEv==0) {
+                                            beep.start();
+                                            buttonSpeech.setBackgroundResource(R.drawable.button_pressed);
                                             keyEv++;
                                         }
                                         else {
                                             keyEv--;
+                                            boop.start();
+                                            buttonSpeech.setBackgroundResource(R.drawable.button_normal);
                                             try {
                                                 Thread.sleep(500);
                                             } catch (InterruptedException e) {
                                                 e.printStackTrace();
                                             }
                                             mActiveCommand.dispatchKeyEvent(new KeyEvent(KeyEvent.ACTION_DOWN, KeyEvent.KEYCODE_ENTER));
-
                                         }
                                     }
                                 });

@@ -29,7 +29,7 @@
             android:text="TEXT"
             android:textSize="0sp"
             android:src="@drawable/microphone_icon"
-            android:background="@null"
+            android:background="@drawable/button_selector"
             android:scaleType="centerCrop" />
     </androidx.cardview.widget.CardView>
 </RelativeLayout>
